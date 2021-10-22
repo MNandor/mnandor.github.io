@@ -20,8 +20,13 @@
 
 
 a {
-
+	color: #FF5000;
 }
+
+a:hover {
+	color: #FFA000;
+}
+
 
 #headerdiv a {
 	margin-top: 16px;
