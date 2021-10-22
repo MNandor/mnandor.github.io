@@ -1,0 +1,87 @@
+#maindiv, #headerdiv {
+	background-color: #101010;
+	border: 2px solid #FF0000;
+	border-radius: 20px;
+	color: #FF0000
+
+}
+
+@media only screen and (min-width: 600px){
+	#maindiv, #headerdiv {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}
+
+#headerdiv {
+	margin-bottom: 32px;
+}
+
+
+
+a {
+
+}
+
+#headerdiv a {
+	margin-top: 16px;
+	display: inline-block;
+	margin-bottom: 16px;
+	margin-right: 8%;
+	margin-left: 8%;
+
+}
+body {
+	background-color: #000000;
+}
+
+
+
+h1 {
+	border-bottom: 2px solid #FF0000;
+}
+
+
+h2  {
+	text-align: left;
+	text-decoration: underline;
+	margin-left: 16px;
+
+}
+
+h3 {
+	text-align: left;
+	margin-left: 32px;
+}
+
+h4 {
+	text-align: left;
+	margin-left: 48px;
+}
+
+p {
+	margin-left: 48px;
+	text-align: left;
+}
+
+iframe {
+	border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
