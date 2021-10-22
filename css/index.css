@@ -1,4 +1,4 @@
-#maindiv, #headerdiv {
+#maindiv, #headerdiv, #imgdiv {
 	background-color: #101010;
 	border: 2px solid #FF0000;
 	border-radius: 20px;
@@ -7,7 +7,7 @@
 }
 
 @media only screen and (min-width: 600px){
-	#maindiv, #headerdiv {
+	#maindiv, #headerdiv, #imgdiv {
 		margin-left: 15%;
 		margin-right: 15%;
 	}
@@ -17,7 +17,16 @@
 	margin-bottom: 32px;
 }
 
+img {
+	border: 2px solid #FF0000;
+	border-radius: 20px;
+	margin: 16px;
+}
 
+
+#imgdiv img {
+	width: 90%;
+}
 
 a {
 	color: #FF5000;
@@ -66,13 +75,9 @@ h4 {
 
 p {
 	margin-left: 48px;
+	margin-right: 48px;
 	text-align: left;
 }
-
-iframe {
-	border: none;
-}
-
 
 
 
