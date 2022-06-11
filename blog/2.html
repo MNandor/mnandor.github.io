@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>
+			Nándor - Blog
+		</title>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+	</head>
+	<body>
+		<center>
+			<div id="headerdiv">
+				<a href="index.html">Back</a>
+			</div>
+			<div id="maindiv">
+				<h1>Joplin To Anki</h1>
+					<p>2022-06-11</p>
+				<hr />
+				<h2>Terminology</h2>	
+				<h3> <img src="img/Anki-icon.svg" style="height: 1em; margin:0px; border: 0px; fill:red; margin-bottom: -2px; border-radius: 2px;"> Anki</h3>
+				<h3> <img src="img/Joplin-icon.svg" style="height: 1em; margin:0px; border: 0px; fill:red; margin-bottom: -2px; border-radius: 2px;"> Joplin</h3>
+				<p>Joplin is a note-taking program. It helps you manage your notes and notebooks, offer tools to write Markdown, and renders said Markdown on screen.</p>
+				<p>Joplin is mainly a Markdown editor, but it correctly renders most HTML written in it as well.</p>
+				<p>If you're familiar with OneNote, Obsidian, or EverNote, Joplin is similar. Except it's open-source!</p>
+				<h3> <img src="img/Markdown-mark.svg" style="height: 1em; margin:0px; border: 0px; fill:red; margin-bottom: -2px;"> Markdown</h3>
+				<p>Markdown works similarly to HTML: you can write text in Markdown, and define formatting for that text in the same file.</p>
+				<p>Markdown is designed to be easier to write. While HTML requires pairs of tags, in Markdown, a couple symbols are all it takes to create the formatting.</p>
+				<p>In HTML, one can type <code>&lt;b&gt;text&lt;/b&gt;</code> to get bold <b>text</b>. Doing the same is much easier in Markdown, by typing <code>**text**</code>Same goes for <i>italics</i>: <code>&lt;i&gt;italics&lt;/i&gt;</code> can be written as <code>*italics*</code>.</p>
+				The relevant parts of Markdown syntax can be seen below.
+				<div>
+					<figure style="display: inline-block; width: 25%; margin: 8px;"><img src="img/j2a_markdown.png"><figcaption style="display: inline-block;">Markdown</figcaption></figure>
+					<figure style="display: inline-block; width: 25%; margin: 8px;"><img src="img/j2a_html.png"><figcaption style="display: inline-block;">HTML equivalent</figcaption></figure>
+					<figure style="display: inline-block; width: 25%; margin: 8px;"><img src="img/j2a_rendered.png"><figcaption style="display: inline-block;">Rendered</figcaption></figure>
+				</div>
+				<h2>The Problem I Want To Solve</h2>
+				<p>Anki is <u>really good</u> at helping you memorize information. I use it every day. However, it's specifically designed for <i>atomic</i> pieces on information. Learning 100 foreign words means creating 100 cards. Understanding of grammatical structures is not something you would use Anki for.</p>
+				<p>In contrast, the free-form nature of Markdown editors like Joplin are perfectly suitable for recording information in whatever arbitrary way makes sense to you. However, there is no <abbr title="Spaced Repetition System">SRS</abbr> functionality that Anki is famous for.</p>
+				<p>I personally create Joplin notes for things I study. They act as sort of "wiki pages" or "cheat sheets".</p>
+				Here is part of my (work-in-progress) Joplin page for studying the Vim text editor.<br>
+				<img src="img/j2avim.png">
+				<p>Notice how the Note page contains explanatory <u>Text Notes</u>, as well as a nicely formatted <u>Markdown Table of Hotkeys</u>.</p>
+				<p>The page also follows a set structure as seen in <u>Table of Content</u>.</p>
+				<p>You could imagine a similar layout for language-learning. A Markdown table could contain words with their foreign translations, with some explanation mixed in between these tables. The <u>Headings</u> could serve as topic markers, such as names of animals or colors.</p>
+				<p><b>I don't want to manually input all of this into Anki.</b></p>
+
+				<h2>Tables to Cards</h2>
+				<p>I decided to write a program that lets me take the information in Markdown tables and create Anki cards based on them. This way:</p>
+				<ul>
+					<li>The two sources of information don't go "out of sync" with each other, since I can just update on based on the other</li>
+					<li>I can have a nice "cheat sheet" Joplin page I can open to quickly look something up, or even print</li>
+					<li>I can have my atomic Anki cards that I can practice</li>
+				</ul>
+
+				From the table above, these are some of the cards I generated.
+				<div>
+					<figure style="display: inline-block; width: 25%; margin: 8px;"><img src="img/j2av1.png"><figcaption style="display: inline-block;">Card 1</figcaption></figure>
+					<figure style="display: inline-block; width: 25%; margin: 8px;"><img src="img/j2av2.png"><figcaption style="display: inline-block;">Card 2</figcaption></figure>
+					<figure style="display: inline-block; width: 25%; margin: 8px;"><img src="img/j2av3.png"><figcaption style="display: inline-block;">Card 3</figcaption></figure>
+				</div>
+				<br>
+				The way I achieved this was to export fields from the Markdown table into Anki card fields.
+				<img src="img/j2aconv.png">
+
+				<br>
+				<sub>(Ignore the fact that <i>Quit file</i> and <i>How to quit file?</i> are not the exact same wording.)</sub>
+				<p>The tag <code>vim::file</code> can also be inferred from the name of the Joplin page <i>Vim</i> and the <u>Heading</u> under which we get our data from. A card created from under the heading <i>Motions</i> and subheading <i>Word Motions</i> would have the tag <code>vim::motions::word-motions</code>.</p>
+
+			</div>
+		</center>
+	</body>
+</html>
