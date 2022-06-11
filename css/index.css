@@ -105,7 +105,7 @@ p, li, code, pre {
 	text-align: left;
 }
 
-p code {
+p code, li code{
 	/* Code that appears inline - no need for margin */
 	/* <pre> is used for code blocks */
 	margin: 0px;
