@@ -129,9 +129,37 @@ vim::file,Write with sudo,,`:w !sudo tee %`,:write into stdin of !command&lt;br&
 					<li>By adding <code>vim::macros</code> to the <font color="#00FFFF">Anki</font> card, this would become identical.</li>
 				</ul>
 
+				<h2>Exclude</h2>
+				<p>You might want to have cards in a deck that don't interact with Joplin, or table rows in Joplin that don't get exported to Anki.</p>
+				<p>Simply add <code>j2aignore</code> either as a tag in Anki, or an HTML comment inside Joplin. Adding the comment in the table header results in the entire table being ignored.</p>
+
+				<div>
+					<figure style="display: inline-block; width: 25%; margin: 8px;"><img src="img/j2aigna.png"><figcaption style="display: inline-block;">Ignore Anki</figcaption></figure>
+					<figure style="display: inline-block; width: 25%; margin: 8px;"><img src="img/j2aignj.png"><figcaption style="display: inline-block;">Ignore Markdown row</figcaption></figure>
+					<figure style="display: inline-block; width: 25%; margin: 8px;"><img src="img/j2aignt.png"><figcaption style="display: inline-block;">Ignore Markdown table</figcaption></figure>
+				</div>
+
 				<h2>Want To Try It?</h2>
 				<p>The source and download for the tool can be found <font size="6"><a href="https://github.com/MNandor/joplin-to-anki">here</a></font>.</p>
-				<p>Please keep in mind that the code is very much work-in-progess. It's <u>undocumented</u> and <u>breaks in pretty much all use cases except the exact same thing I did</u>.</p>
+				<p>Please keep in mind that the code is very much work-in-progess. It's <u>undocumented</u> and <u>breaks in pretty much all use cases except the exact same thing I did</u>. In particular, I have no idea what happens if:</p>
+
+				<ul>
+					<li>An Anki Note has multiple card templates</li>
+					<li>If an Anki Deck has multiple different Note types</li>
+					<li>If either Joplin or Anki contains images</li>
+				</ul>
+
+				<p>Here's a list of intended features I want to add</p>
+				<ol>
+					<li>Better configuration: let user select Joplin Note / Anki Deck combinations without editing config file each time</li>
+					<li>Automatic importing to Anki, without user interaction</li>
+					<li>The reverse: update Joplin based on Anki?</li>
+					<li>Logging and backups</li>
+					<li>Make everything more user-friendly</li>
+					<li>Reference cards in Joplin in ways other than tables (no idea how yet)</li>
+					<li>Allow for multiple Joplin notes to be associated with multiple Anki decks (instead of always 1-to-1)</li>
+					<li>The hierarchical tag structure might be nice to visualize somehow</li>
+				</ol>
 
 			</div>
 		</center>
