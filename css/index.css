@@ -43,6 +43,20 @@ img {
 }
 
 
+
+table {
+	text-align: left;
+	margin-left: 36px;
+	border: 2px solid #FF0000;
+	border-radius: 20px;
+}
+
+td:not(:empty), th {
+	color: #FF0000;
+	background: #202020;
+}
+
+
 #imgdiv img {
 	width: 90%;
 }

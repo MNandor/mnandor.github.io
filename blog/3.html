@@ -1,0 +1,1010 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>
+			Vim Cheatsheet
+		</title>
+		<meta charset='utf-8'>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+	</head>
+	<body>
+		<center>
+			<div id="headerdiv">
+				<a href="index.html">Back</a>
+			</div>
+		</center>
+			<div id="maindiv">
+
+		<center>
+
+				<h1>Vim Cheatsheet</h1>
+		</center>
+					<p>2022-06-15</p>
+				<hr />
+				<p>My personal Vim cheat sheet, information collected from various sources. This post was exported from Markdown and is compatible with my <a href="2.html">Joplin-to-Anki program</a>.</p>
+				<p>There might be a couple inaccuracies, I just wanted to see how this looked as a website.</p>
+<h2 id="file">File</h2>
+<!--  Some shortcuts have forward/backward pairs
+Use this format:
+N n
+If up/down, use this format:
+O
+o
+-->
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quit file</td>
+<td></td>
+<td>:q</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Force quit file</td>
+<td>ZQ</td>
+<td>:q! </td>
+</tr>
+<tr>
+<td>Write file</td>
+<td></td>
+<td>:w</td>
+<td></td>
+<td>ZS</td>
+</tr>
+<tr>
+<td>Write and quit file</td>
+<td>ZZ</td>
+<td>:wq</td>
+</tr>
+<tr>
+<td>Undo, redo</td>
+<td>u Ctrl-r</td>
+</tr>
+<tr>
+<td>Write with sudo</td>
+<td></td>
+<td>:w !sudo tee %</td>
+<td>:write into stdin of !command<br>% is the file&#39;s name</td>
+</tr>
+<tr>
+<td>Open file under cursor for editing</td>
+<td>gf</td>
+</tr>
+<tr>
+<td>open (not edit) a filename under cursor</td>
+<td>gx</td>
+</tr>
+</tbody>
+</table>
+<h2 id="motions">Motions</h2>
+<ul>
+<li>motions, when alone, move the cursor.<ul>
+<li><code>l</code> moves the cursor right → </li>
+</ul>
+</li>
+<li>prepend a number to the motion to repeat n times.<ul>
+<li><code>5l</code> moves 5 characters to the right →</li>
+</ul>
+</li>
+<li>some commands expect a motion.<ul>
+<li><code>dl</code> deletes 1 character to the right →</li>
+<li><code>d5l</code> deletes 5 characters to the right →</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Navigation</td>
+<td>h j k l</td>
+<td></td>
+<td>Called Vim-keys.<br>J looks like a down arrow.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Jump to line 5</td>
+<td>5gg<br>5G</td>
+<td>:5</td>
+</tr>
+<tr>
+<td>Jump to the start and end of a line</td>
+<td>0 ^ $</td>
+<td></td>
+<td>Same as regex symbols.<br>^ jumps to first non-whitespace.<br>Last non-whitespace is g_</td>
+</tr>
+<tr>
+<td>Jump to top, bottom of file</td>
+<td>gg<br>G</td>
+</tr>
+<tr>
+<td>Jump to other end of parentheses</td>
+<td>%</td>
+<td></td>
+<td>When not touching one, jumps to last open parenthesis.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="screen-dependent">Screen Dependent</h3>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move up/down in visual line</td>
+<td>gk<br>gj</td>
+<td></td>
+<td>When line-wrapping is enabled, treats lines as they appear on screen.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Motion to top, middle, bottom part of current screen</td>
+<td>H<br>M<br>L</td>
+</tr>
+<tr>
+<td>Center cursor on screen</td>
+<td>zz</td>
+</tr>
+<tr>
+<td>Jump to where you just were</td>
+<td>&#39;&#39;</td>
+</tr>
+<tr>
+<td>Move to previous/next change</td>
+<td>g; g,</td>
+</tr>
+</tbody>
+</table>
+<h3 id="word-motions">Word Motions</h3>
+<ul>
+<li>motions between words, separated by spaces</li>
+<li>without capitals, punctuation is treated as a separate word</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motion until to the next word-start</td>
+<td>w W</td>
+<td></td>
+<td>W considers punctuation to be part of the word.</td>
+</tr>
+<tr>
+<td>Motion until the next word-end</td>
+<td>e E</td>
+<td></td>
+<td>E considers punctuation to be part of the word.</td>
+</tr>
+<tr>
+<td>Motion until the last word-start</td>
+<td>b B</td>
+<td></td>
+<td>B considers punctuation to be part of the word.</td>
+</tr>
+<tr>
+<td>Until the last word-end</td>
+<td>ge gE</td>
+<td></td>
+<td>gE considers punctuation to be part of the word.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="text-objects">Text Objects</h3>
+<ul>
+<li>act as the selection for commands</li>
+<li><code>i</code> (inside) / <code>a</code> (around): whether to include the boundary (such as spaces or parentheses)</li>
+<li>commands are included in the examples, but different commands work with the same text objects</li>
+<li><a href="https://blog.carbonfive.com/vim-text-objects-the-definitive-guide/">additional info</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete this word</td>
+<td>diw diW</td>
+<td></td>
+<td>W includes punctuation.</td>
+</tr>
+<tr>
+<td>Delete around this word (including surrounding space)</td>
+<td>daw daW</td>
+<td></td>
+<td>W includes punctuation.</td>
+</tr>
+<tr>
+<td>Change this entire line</td>
+<td>c_</td>
+</tr>
+<tr>
+<td>Change this parentheses block</td>
+<td>ci(<br>ci]<br>ci{<br>ci&gt;</td>
+<td></td>
+<td>ca( to include the parentheses themselves.<br>Both left and right character is fine.</td>
+</tr>
+<tr>
+<td>Delete around quotes</td>
+<td>da&quot;<br>da&#39;<br>da`</td>
+</tr>
+<tr>
+<td>Yank this sentence</td>
+<td>yis<br>yas</td>
+</tr>
+<tr>
+<td>Yank this paragraph</td>
+<td>yip<br>yap</td>
+</tr>
+<tr>
+<td>Delete inside HTML tags</td>
+<td>dit</td>
+<td></td>
+<td>dat to delete the tags themselves</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bookmarks">Bookmarks</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show all created bookmarks</td>
+<td></td>
+<td>:marks</td>
+</tr>
+<tr>
+<td>Set bookmark a</td>
+<td>ma</td>
+</tr>
+<tr>
+<td>Go to bookmark a</td>
+<td>`a</td>
+<td></td>
+<td>&#39;a goes to the line</td>
+<td>Ma</td>
+</tr>
+</tbody>
+</table>
+<h2 id="insert-mode">Insert Mode</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter insert mode</td>
+<td>i</td>
+</tr>
+<tr>
+<td>Exit insert mode</td>
+<td>Esc</td>
+</tr>
+<tr>
+<td>Append a line above/below</td>
+<td>O<br>o</td>
+</tr>
+<tr>
+<td>Append at the start and end of a line</td>
+<td>I A</td>
+</tr>
+<tr>
+<td>Enter replace mode to overwrite characters</td>
+<td>Shift R</td>
+</tr>
+</tbody>
+</table>
+<h3 id="insert-mode-commands">Insert Mode Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insert a literal newline</td>
+<td>Ctrl V Enter</td>
+</tr>
+<tr>
+<td>Autocomplete file name</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="editing">Editing</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change a single character</td>
+<td>r</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Delete a single character</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Change the selected text (delete &amp; insert)</td>
+<td>c</td>
+<td></td>
+<td>Used with a motion: c2w</td>
+</tr>
+<tr>
+<td>Delete the selected text</td>
+<td>d</td>
+<td></td>
+<td>Used with a motion: d2w</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Yank (copy) to clipboard</td>
+<td>y</td>
+<td></td>
+<td>Used with a motion: d2w</td>
+</tr>
+<tr>
+<td>Change line</td>
+<td>cc</td>
+</tr>
+<tr>
+<td>Delete a line</td>
+<td>dd</td>
+<td></td>
+<td></td>
+<td>XX</td>
+</tr>
+<tr>
+<td>Yank a line</td>
+<td>yy</td>
+</tr>
+<tr>
+<td>Duplicate a line</td>
+<td>yyp</td>
+<td></td>
+<td></td>
+<td>Ctrl D</td>
+</tr>
+<tr>
+<td>Change until end of line</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Delete until end of line</td>
+<td>D</td>
+</tr>
+<tr>
+<td>Yank until end of line</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>Paste from clipboard</td>
+<td>P p</td>
+<td></td>
+<td>P pastes before cursor, p after</td>
+</tr>
+</tbody>
+</table>
+<h3 id="misc">Misc</h3>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set lower/uppercase for selection</td>
+<td>gu gU</td>
+</tr>
+<tr>
+<td>Toggle lower/upper case for one letter</td>
+<td>~</td>
+</tr>
+<tr>
+<td>Toggle lower/upper case for selection</td>
+<td>g~</td>
+</tr>
+<tr>
+<td>Decrement / increment number</td>
+<td>Ctrl X Ctrl A</td>
+</tr>
+<tr>
+<td>Get the ASCII code of character under cursor</td>
+<td>ga</td>
+</tr>
+</tbody>
+</table>
+<h2 id="searching">Searching</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regex search for a word</td>
+<td>/word</td>
+</tr>
+<tr>
+<td>Regex search backwards</td>
+<td>?word</td>
+</tr>
+<tr>
+<td>Navigate to previous/next regex match</td>
+<td>N n</td>
+</tr>
+<tr>
+<td>Motion previous/next character x</td>
+<td>Fx fx</td>
+</tr>
+<tr>
+<td>Jump to previous/next character x but not including x</td>
+<td>Tx tx</td>
+</tr>
+<tr>
+<td>Repeat f, F, t, T command</td>
+<td>;</td>
+</tr>
+<tr>
+<td>Repeat f, F, t, T command, but reverse direction</td>
+<td>,</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visual-mode">Visual Mode</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter visual mode</td>
+<td>v</td>
+</tr>
+<tr>
+<td>Enter line-visual mode</td>
+<td>Shift v</td>
+</tr>
+<tr>
+<td>Enter block-visual mode</td>
+<td>Ctrl v</td>
+</tr>
+<tr>
+<td>Move to other corner of visual selection</td>
+<td>o</td>
+<td></td>
+<td>Shift O is similar but o is enough</td>
+</tr>
+</tbody>
+</table>
+<h2 id="live-config">Live Config</h2>
+<ul>
+<li>if the <code>:set</code> commands ends in <code>?</code> it returns current value</li>
+<li>if the <code>:set</code> commands ends in <code>!</code> it toggles</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>See whitespace</td>
+<td></td>
+<td>:set list!</td>
+</tr>
+<tr>
+<td>Find out filetype</td>
+<td></td>
+<td>:set filetype?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="spellcheck">Spellcheck</h3>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle spellcheck on/off</td>
+<td></td>
+<td>:set spell!</td>
+</tr>
+<tr>
+<td>Change spellcheck language</td>
+<td></td>
+<td>:set spelllang=hu</td>
+</tr>
+<tr>
+<td>Add/remove a word to dictionary?</td>
+<td>zg zug</td>
+</tr>
+<tr>
+<td>Jump to previous/next badly spelled word</td>
+<td>[s ]s</td>
+</tr>
+<tr>
+<td>See suggestions</td>
+<td>z=</td>
+<td></td>
+<td></td>
+<td>Ctrl B</td>
+</tr>
+<tr>
+<td>Create new abbreviation</td>
+<td></td>
+<td>:ab short Long text here</td>
+</tr>
+<tr>
+<td>Enter abbreviation without expanding it</td>
+<td>Ctrl V</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tabs-and-windows">Tabs and Windows</h2>
+<h3 id="tabs">Tabs</h3>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open a file in a new tab</td>
+<td></td>
+<td>:tabnew file</td>
+</tr>
+<tr>
+<td>Select from file browser and open in a new tab</td>
+<td></td>
+<td>:tabfind path</td>
+</tr>
+<tr>
+<td>Close a tab</td>
+<td></td>
+<td>:tabclose</td>
+<td>:q works fine too</td>
+</tr>
+<tr>
+<td>Switch tabs</td>
+<td>gt gT</td>
+</tr>
+</tbody>
+</table>
+<h3 id="windows">Windows</h3>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Common hotkey for side-by-side window commands</td>
+<td></td>
+</tr>
+<tr>
+<td>Split current file into side-by-side windows</td>
+<td>Ctrl ws<br>Ctrl wv</td>
+</tr>
+<tr>
+<td>Close current side-by-side window</td>
+<td>Ctrl wq</td>
+</tr>
+<tr>
+<td>Switch focus between side-by-side windows</td>
+<td>Ctrl ww</td>
+</tr>
+<tr>
+<td>Make side-by-side windows equal in size?</td>
+<td>Ctrl w=</td>
+</tr>
+<tr>
+<td>Open a file side-by-side</td>
+<td></td>
+</tr>
+<tr>
+<td>Decrease window width 10 times</td>
+<td></td>
+</tr>
+<tr>
+<td>Open file explorer side by side</td>
+<td></td>
+<td>:lex!</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vimdiff">Vimdiff</h3>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use vim to compare two files</td>
+<td></td>
+<td>vimdiff f1 f2</td>
+</tr>
+<tr>
+<td>Move changes from one file to another</td>
+<td></td>
+</tr>
+<tr>
+<td>Navigate differences</td>
+<td>[c ]c</td>
+</tr>
+<tr>
+<td>Increase/decrease foldiness</td>
+<td>zm zr</td>
+</tr>
+<tr>
+<td>Fold up text</td>
+<td>zf</td>
+</tr>
+<tr>
+<td>Compare a pasted text with current file</td>
+<td></td>
+<td>:diffthis</td>
+<td>Use after :vnew</td>
+</tr>
+<tr>
+<td>Show diff of edited file vs original</td>
+<td></td>
+<td>:changes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sed-commands">Sed Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete all lines matching pattern</td>
+<td></td>
+<td>:%g/pattern/d</td>
+</tr>
+<tr>
+<td>Delete all lines NOT matching pattern</td>
+<td></td>
+<td>:%v/pattern/d</td>
+<td>:%g!/pattern/d also works</td>
+</tr>
+<tr>
+<td>Regex replacement</td>
+<td></td>
+<td>:%s/old/new/gc</td>
+<td>g for &quot;global&quot;<br>c to ask for confirmation</td>
+</tr>
+<tr>
+<td>Count number of occurences</td>
+<td></td>
+<td>:%s/word//gn</td>
+</tr>
+<tr>
+<td>Run normal mode command</td>
+<td></td>
+<td>:norm keys</td>
+</tr>
+<tr>
+<td>Find-replace with confirmation</td>
+<td></td>
+<td>:%s/old/new/gc</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ranges">Ranges</h3>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Line range for visual selection</td>
+<td></td>
+<td>&#39;&lt;,&#39;&gt;</td>
+</tr>
+<tr>
+<td>Line range from current line to last one</td>
+<td></td>
+<td>.,$</td>
+</tr>
+<tr>
+<td>Replace old with new on lines 3-5 inclusive</td>
+<td></td>
+<td>:3,5s/old/new/g</td>
+</tr>
+</tbody>
+</table>
+<h2 id="registers">Registers</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paste last : command into text</td>
+<td>&quot;:p</td>
+<td></td>
+<td>: is just another register</td>
+</tr>
+<tr>
+<td>Edit macro q</td>
+<td>&quot;qp<br>&quot;qyy</td>
+<td></td>
+<td>Macros are just registers</td>
+</tr>
+<tr>
+<td>Yank to register a</td>
+<td>&quot;ay</td>
+</tr>
+</tbody>
+</table>
+<h3 id="macros">Macros</h3>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Repeat the previous edit action</td>
+<td>.</td>
+</tr>
+<tr>
+<td>Record a macro</td>
+<td>qa</td>
+<td></td>
+<td>&quot;a&quot; can be replaced</td>
+</tr>
+<tr>
+<td>Play a macro</td>
+<td>@a</td>
+<td></td>
+<td>&quot;a&quot; can be replaced</td>
+</tr>
+<tr>
+<td>Play the latest macro played</td>
+<td>@@</td>
+</tr>
+<tr>
+<td>Repeat last : command</td>
+<td>@:</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shell-commands">Shell Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Personal Hotkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open a terminal</td>
+<td></td>
+<td>:sh</td>
+<td>:ter for split window</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Substitute for name of current file in ! commands</td>
+<td></td>
+<td>%</td>
+</tr>
+<tr>
+<td>Substitute for full path of current file in ! commands</td>
+<td></td>
+<td>%:p</td>
+</tr>
+<tr>
+<td>Substitute for current file&#39;s folder?(relative to pwd)</td>
+<td></td>
+<td>%:h</td>
+</tr>
+<tr>
+<td>Copy a file&#39;s content into current file</td>
+<td></td>
+<td>:read filename</td>
+</tr>
+<tr>
+<td>Run a command and paste its output into current file</td>
+<td></td>
+<td>:read !command</td>
+</tr>
+</tbody>
+</table>
+<!-- This requires that the "hotkey" field is always 1st -->
+<style>
+
+    table td:nth-child(2) {
+        font-family: Karma Future;
+        line-height: 1.2em;
+        font-size: 2em;
+        width: 150px;
+		color: #FFAAAA;
+    }
+
+	table th:nth-child(1) {
+            width: 150px;
+    }
+
+	table th:nth-child(3) {
+            width: 300px;
+    }
+	table th:nth-child(4) {
+            width: 300px;
+    }
+	table th:nth-child(5) {
+            width: 150px;
+    }
+
+    table td:nth-child(3) {
+        font-size: 1.5em;
+        font-family: monospace;
+        text-decoration: overline 1px green;
+        color: green;
+
+    }
+
+
+
+        table td:nth-child(5) {
+        font-family: Karma Future;
+        font-size: 2em;
+        color: #3333FF;
+    }
+
+    /* disable joplin's default huge padding */
+    th, td, tr {
+        padding: 4px !important;
+    }
+
+
+
+</style>
+
+
+			</div>
+	</body>
+</html>
