@@ -82,7 +82,15 @@
 				<p>The <i>totally</i> sustainable workaround was to simply give my layout a new name. Enter <code>Copy-of-N_KB_final_5_final</code>.</p>
 				<p>It took a while, but in the end I got the keyboard working. Was there a better way to do things? Who knows. Even if there was, Windows did a terrible job at communicating it.</p>
 				<h2>Arch Linux</h2>
+				<p>You're going to have to edit this file: <u>/usr/share/X11/xkb/symbols/us</u>.</p>
+				<p>For example, if your editor is Mousepad, you would run <code>sudo mousepad /usr/share/X11/xkb/symbols/us</code>.</p>
+				<p>You will find one line for each keyboard key, each with two symbols defining what the key alone and the key with Shift pressed down does. You need to append two more for AltGr + Key and Shift + AltGr + Key.</p>
 
+				<img src="img/ckl_pre.png">
+				<br><b>↓</b><br>
+				<img src="img/ckl_post.png">
+				<p>If it's a Unicode character, you're going to have to use its <a href="https://unicode-table.com/en/", target="_blank">Unicode Number</a>.</p>
+				<p>When you're done, save the file, and log out of your graphical environment (or just reboot).</p>
 			</div>
 		</center>
 	</body>
