@@ -39,7 +39,7 @@ img {
 	border: 2px solid #FF0000;
 	border-radius: 20px;
 	margin: 16px;
-	max-width: 100%;
+	max-width: 90%;
 }
 
 
@@ -123,6 +123,10 @@ p code, li code{
 	/* Code that appears inline - no need for margin */
 	/* <pre> is used for code blocks */
 	margin: 0px;
+}
+
+code {
+	background-color: #000000;
 }
 
 blockquote {
