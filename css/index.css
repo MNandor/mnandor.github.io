@@ -59,6 +59,19 @@ td:not(:empty), th {
 
 #imgdiv img {
 	width: 90%;
+	text-align: center;
+	margin: 30px auto 4px;
+	display: block;
+}
+
+#maindiv > img {
+	margin: 30px auto 4px;
+	display: block;
+}
+
+#comparison {
+	text-align: center;
+
 }
 
 a {
@@ -148,6 +161,11 @@ li p {
 
 
 #imgdiv p {
+	text-align: center;
+}
+
+
+h1 {
 	text-align: center;
 }
 
