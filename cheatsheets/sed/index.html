@@ -1,0 +1,104 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link rel="icon" href="/img/icon.png">
+	<title>
+		Cheatsheet - Sed
+	</title>
+</head>
+<body>
+	<div id="headerdiv">
+	<a href="/cheatsheets">Back</a>
+</div>
+
+
+	<div id="maindiv">
+		<h1>Sed</h1>
+
+		<p>2022 Sep 25</p>
+		<hr>
+
+		<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete all lines not matching <!-- raw HTML omitted -->pattern<!-- raw HTML omitted --></td>
+<td></td>
+<td>sed &lsquo;/pattern/!d&rsquo;</td>
+<td>Try to run with single quotes in bash as !d might be interpreted</td>
+<td></td>
+</tr>
+<tr>
+<td>Replace old word with new</td>
+<td></td>
+<td>sed &rsquo;s/old/new/g'</td>
+<td>Without g, it only replaces the first one in each line</td>
+<td></td>
+</tr>
+<tr>
+<td>How to run multiple expressions?</td>
+<td></td>
+<td>sed -e &rsquo;expr&rsquo; -e &rsquo;expr'</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Only delete if line matches pattern</td>
+<td></td>
+<td>sed &lsquo;/pattern/d&rsquo;</td>
+<td>Note: this /pattern part can be applied to the start of other commands</td>
+<td></td>
+</tr>
+<tr>
+<td>What if / is part of your pattern?</td>
+<td></td>
+<td></td>
+<td>You can use other symbols such as # or | to separate parts of the sed expression</td>
+<td></td>
+</tr>
+<tr>
+<td>How to reference the matched string in a substitution?</td>
+<td></td>
+<td>sed &rsquo;s/old/&amp;/g'</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Substitution, change case</td>
+<td></td>
+<td>sed &rsquo;s/old/\U&amp;/g'</td>
+<td>L for lowercase<!-- raw HTML omitted -->Lowercase l&amp;u only act on one letter</td>
+<td></td>
+</tr>
+<tr>
+<td>Use extended regex</td>
+<td></td>
+<td>sed -E</td>
+<td>Supports capture groups, numbers, etc. No need to escape \1</td>
+<td></td>
+</tr>
+<tr>
+<td>Ignore case in a sed pattern?</td>
+<td></td>
+<td></td>
+<td>Add I to the end (same place as gc)</td>
+<td></td>
+</tr>
+<tr>
+<td>Match repeating content</td>
+<td></td>
+<td>/\([a-z]\)\1/</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>

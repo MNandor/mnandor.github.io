@@ -2,10 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://nandor.ml/cheatsheets/sed/</loc>
+    <lastmod>2022-09-25T16:07:37+03:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/latex/</loc>
+    <lastmod>2022-09-25T15:57:49+03:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/archinstall/</loc>
+    <lastmod>2022-09-25T15:14:28+03:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/android/</loc>
+    <lastmod>2022-09-25T15:10:54+03:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/git/</loc>
+    <lastmod>2022-09-25T15:10:49+03:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/vim/</loc>
+    <lastmod>2022-09-25T15:10:47+03:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/bash/</loc>
+    <lastmod>2022-09-25T15:10:43+03:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/python/</loc>
+    <lastmod>2022-09-25T15:10:31+03:00</lastmod>
+  </url><url>
     <loc>http://nandor.ml/blog/initial/</loc>
     <lastmod>2022-09-17T17:30:12+03:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/blog/</loc>
+    <lastmod>2022-09-17T16:53:47+03:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/</loc>
     <lastmod>2022-09-17T16:53:47+03:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/cv/</loc>
