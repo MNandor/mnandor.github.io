@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Nándor</title>
+    <link>http://nandor.ml/cheatsheets/linux/</link>
+    <description>Recent content in Linux on Nándor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Sep 2022 16:53:47 +0300</lastBuildDate><atom:link href="http://nandor.ml/cheatsheets/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archinstall</title>
+      <link>http://nandor.ml/cheatsheets/linux/archinstall/</link>
+      <pubDate>Sun, 25 Sep 2022 15:14:28 +0300</pubDate>
+      
+      <guid>http://nandor.ml/cheatsheets/linux/archinstall/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>http://nandor.ml/cheatsheets/linux/git/</link>
+      <pubDate>Sun, 25 Sep 2022 15:10:49 +0300</pubDate>
+      
+      <guid>http://nandor.ml/cheatsheets/linux/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>http://nandor.ml/cheatsheets/linux/vim/</link>
+      <pubDate>Sun, 25 Sep 2022 15:10:47 +0300</pubDate>
+      
+      <guid>http://nandor.ml/cheatsheets/linux/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>http://nandor.ml/cheatsheets/linux/bash/</link>
+      <pubDate>Sun, 25 Sep 2022 15:10:43 +0300</pubDate>
+      
+      <guid>http://nandor.ml/cheatsheets/linux/bash/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

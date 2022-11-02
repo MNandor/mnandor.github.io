@@ -2,47 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://nandor.ml/cheatsheets/sed/</loc>
-    <lastmod>2022-09-25T16:07:37+03:00</lastmod>
+    <loc>http://nandor.ml/cheatsheets/android/livedata/</loc>
+    <lastmod>2022-11-02T15:33:33+02:00</lastmod>
   </url><url>
-    <loc>http://nandor.ml/cheatsheets/latex/</loc>
-    <lastmod>2022-09-25T15:57:49+03:00</lastmod>
+    <loc>http://nandor.ml/cheatsheets/android/data-binding/</loc>
+    <lastmod>2022-11-02T11:07:38+02:00</lastmod>
   </url><url>
-    <loc>http://nandor.ml/cheatsheets/archinstall/</loc>
-    <lastmod>2022-09-25T15:14:28+03:00</lastmod>
+    <loc>http://nandor.ml/cheatsheets/android/build-gradle/</loc>
+    <lastmod>2022-11-02T15:33:33+02:00</lastmod>
   </url><url>
-    <loc>http://nandor.ml/cheatsheets/android/</loc>
-    <lastmod>2022-09-25T15:10:54+03:00</lastmod>
+    <loc>http://nandor.ml/cheatsheets/android/retrofit/</loc>
+    <lastmod>2022-11-02T11:07:38+02:00</lastmod>
   </url><url>
-    <loc>http://nandor.ml/cheatsheets/git/</loc>
-    <lastmod>2022-09-25T15:10:49+03:00</lastmod>
+    <loc>http://nandor.ml/cheatsheets/android/kotlin/</loc>
+    <lastmod>2022-11-01T17:51:38+02:00</lastmod>
   </url><url>
-    <loc>http://nandor.ml/cheatsheets/vim/</loc>
-    <lastmod>2022-09-25T15:10:47+03:00</lastmod>
+    <loc>http://nandor.ml/cheatsheets/android/rxjava/</loc>
+    <lastmod>2022-11-02T15:33:33+02:00</lastmod>
   </url><url>
-    <loc>http://nandor.ml/cheatsheets/bash/</loc>
-    <lastmod>2022-09-25T15:10:43+03:00</lastmod>
+    <loc>http://nandor.ml/cheatsheets/android/room/</loc>
+    <lastmod>2022-11-01T17:51:38+02:00</lastmod>
   </url><url>
-    <loc>http://nandor.ml/cheatsheets/python/</loc>
-    <lastmod>2022-09-25T15:10:31+03:00</lastmod>
+    <loc>http://nandor.ml/cheatsheets/android/interviews/</loc>
+    <lastmod>2022-11-02T14:26:00+02:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/android/hilt/</loc>
+    <lastmod>2022-11-02T14:17:22+02:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/android/dagger/</loc>
+    <lastmod>2022-11-01T17:51:38+02:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/linux/archinstall/</loc>
+    <lastmod>2022-11-02T15:23:48+02:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/linux/git/</loc>
+    <lastmod>2022-11-02T15:23:48+02:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/linux/vim/</loc>
+    <lastmod>2022-11-02T15:23:48+02:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/linux/bash/</loc>
+    <lastmod>2022-11-02T15:23:48+02:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/blog/initial/</loc>
-    <lastmod>2022-09-17T17:30:12+03:00</lastmod>
+    <lastmod>2022-11-02T14:17:06+02:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/android/</loc>
+    <lastmod>2022-11-01T17:51:38+02:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/blog/</loc>
-    <lastmod>2022-09-17T16:53:47+03:00</lastmod>
+    <lastmod>2022-09-17T17:48:28+03:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/cheatsheets/</loc>
-    <lastmod>2022-09-17T16:53:47+03:00</lastmod>
+    <lastmod>2022-09-25T15:19:36+03:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/cv/</loc>
-    <lastmod>2022-09-17T16:53:47+03:00</lastmod>
+    <lastmod>2022-09-19T12:55:49+03:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/german/</loc>
+    <lastmod>2022-11-02T15:23:48+02:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/linux/</loc>
+    <lastmod>2022-11-02T15:23:48+02:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/pics/</loc>
-    <lastmod>2022-09-17T16:53:47+03:00</lastmod>
+    <lastmod>2022-09-18T21:01:06+03:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/python/</loc>
+    <lastmod>2022-11-02T15:23:48+02:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/cheatsheets/romanian/</loc>
+    <lastmod>2022-11-02T15:23:48+02:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/</loc>
-    <lastmod>2022-09-17T16:30:54+03:00</lastmod>
+    <lastmod>2022-09-18T20:46:28+03:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/categories/</loc>
   </url><url>

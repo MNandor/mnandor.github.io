@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Nándor</title>
+    <link>http://nandor.ml/cheatsheets/python/</link>
+    <description>Recent content in Python on Nándor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Sep 2022 16:53:47 +0300</lastBuildDate><atom:link href="http://nandor.ml/cheatsheets/python/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
