@@ -15,8 +15,111 @@
 	<div id="maindiv">
 		<h1>Archinstall</h1>
 
-		<p>Created: 2022 Sep 25 / Modified: 2022 Nov 02</p>
-		<hr>
+		<p>Arch Linux is a Linux <abbr title="distribution">distro</abbr> that&rsquo;s <em>relatively</em> hard to install.
+While guided installers do exist, part of an Arch user&rsquo;s pride comes from going through the process manually.
+It&rsquo;s actually not difficult at all - running a list on commands in the right order with occasional decisionmaking woven in - but it is a great learning opportunity.</p>
+<p>This guide is based on my personal notes.
+Parts not relevant to me, such as a non-English keyboard layout it omitted because I never needed it.
+The preparation section assumes you already have a Linux machine (such as Ubuntu or Mint), since it&rsquo;s generally not recommended to use Arch as your first distro.</p>
+<h2 id="sources">Sources</h2>
+<ul>
+<li><a href="https://wiki.archlinux.org/title/Installation_guide">Arch Wiki Page</a></li>
+<li><a href="https://www.youtube.com/watch?v=PQgyW10xD8s">DistroTube Video</a></li>
+<li><a href="https://www.youtube.com/watch?v=XNJ4oKla8B0">EF Video About LUKS</a></li>
+<li><a href="https://www.youtube.com/watch?v=FfGzL9zhPoU">Dan Henry Video About XFCE4</a></li>
+</ul>
+<h1 id="get-the-disk-image">Get The Disk Image</h1>
+<p>Unless you&rsquo;re installing Arch in a <abbr title="Virtual Machine">VM</abbr>, you&rsquo;re going to need a USB flash drive.
+This is fairly normal for all Linux distros.
+Keep in mind that all data on the flash drive will be wiped.
+All data on the computer you&rsquo;re installing on will likely also be wiped - so <strong>take backups</strong>.</p>
+<p>The <code>.iso</code> file is a disk image. It&rsquo;s the standard way of of distributing Linux.</p>
+<p>To get the Arch iso, go to:</p>
+<p><a href="https://archlinux.org/download/">https://archlinux.org/download/</a></p>
+<h2 id="verify-the-iso">Verify The Iso</h2>
+<p>The iso file is cryptographically signed so you can make sure you didn&rsquo;t get a copy that has been tampered with.
+Find the downloaded file and look at its sha256 hash, making sure it matches the one displayed on the website.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sha256sum archlinux-2022.10.01-x86_64.iso
+</span></span></code></pre></div><p>(todo pgp)</p>
+<h2 id="create-a-boot-drive">Create a Boot Drive</h2>
+<p>Insert your flash drive and find its name using the following command (its size will show up):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsblk
+</span></span></code></pre></div><p><strong>This is the part where you can accidentally wipe your system.</strong>
+Make sure that you&rsquo;re using the correct device (for example, <code>/dev/sda</code>).</p>
+<p>Once you&rsquo;re certain, write the disk image to the flash drive:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su
+</span></span><span style="display:flex;"><span>cat archlinux-2022.10.01-x86_64.iso &gt; /dev/sda
+</span></span><span style="display:flex;"><span>exit
+</span></span></code></pre></div><h1 id="first-steps">First Steps</h1>
+<h2 id="bios">BIOS</h2>
+<p>When booting your computer, open your BIOS by holding or spamming the <code>F2</code>, <code>F10</code>, <code>F12</code>, and/or <code>Delete</code> keys (depends on manufacturer).</p>
+<p>Then, find a setting called <span style="text-decoration: underline;">Secure Boot</span> and turn it off.
+&ldquo;Secure&rdquo;, in this case, means &ldquo;whatever Microsoft wants&rdquo;.</p>
+<p>After that, you can select your flash drive as the boot device.</p>
+<h2 id="efi-check">EFI Check</h2>
+<p>Once you&rsquo;re in the Arch installer, make sure you&rsquo;re in EFI mode. Run the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>modprobe efivarfs
+</span></span><span style="display:flex;"><span>ls /sys/firmware/efi/efivars
+</span></span></code></pre></div><p>The former should have no output, the latter should list a bunch of files. If you run into errors here, installing <code>grub</code> will require a workaround. VMs can enable EFI mode in the settings.</p>
+<h2 id="internet">Internet</h2>
+<p>VM users and those with a wired connection can skip this.</p>
+<p>Running <code>ip link</code> should show an interface.</p>
+<p>If it does, run the following commands, replacing <code>device</code> and <code>SSID</code> with their proper names:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iwctl
+</span></span><span style="display:flex;"><span>device list
+</span></span><span style="display:flex;"><span>station device scan
+</span></span><span style="display:flex;"><span>station device get-networks
+</span></span><span style="display:flex;"><span>station device connect SSID
+</span></span><span style="display:flex;"><span>exit
+</span></span></code></pre></div><p>If needed, also run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dhcpcd
+</span></span></code></pre></div><p>To verify your connection, simply run <code>ping example.com</code>.</p>
+<h2 id="setup-mirrors">Setup Mirrors</h2>
+<p>A mirror is a server with Arch&rsquo;s package repository, except somewhere else.
+Use Reflector to get the nearest mirrors.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>timedatectl set-ntp true
+</span></span><span style="display:flex;"><span>sudo pacman -Syy reflector
+</span></span><span style="display:flex;"><span>reflector -c Romania -a <span style="color:#ae81ff">6</span> --sort rate --save /etc/pacman.d/mirrorlist
+</span></span><span style="display:flex;"><span>pacman -Syyy
+</span></span></code></pre></div><h1 id="hard-drive">Hard Drive</h1>
+<h2 id="partitions">Partitions</h2>
+<p>Use <code>lsblk</code> and find the drive. It&rsquo;s usually <code>sda</code> or <code>nvme0n1</code>.
+As a shorthand, I will run <code>drive=&quot;sda&quot;</code> so I can reference the drive name easier.</p>
+<p>Use <code>gdisk</code> or an alternative to create partitions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gdisk /dev/$drive
+</span></span></code></pre></div><p>I personally don&rsquo;t make separate home or swap partitions. Here&rsquo;s how to make a boot and a main:</p>
+<ul>
+<li>press <code>n</code> <code>␣</code> <code>␣</code> <code>+200M</code> <code>ef00</code> to create a 200MB boot partition</li>
+<li>press <code>n</code> <code>␣</code> <code>␣</code> <code>␣</code> <code>␣</code> to use the rest of the drive as storage</li>
+<li>press <code>w</code> to save changes and exit</li>
+</ul>
+<p>I will run <code>part=sda2</code> and <code>partefi=sda1</code> to easily refer to these partitions.
+If your setup differs, use the proper partition labels.</p>
+<h2 id="encryption">Encryption</h2>
+<p>Encrypting your partition makes it so you have to give a password on boot, otherwise your data is inaccessible.
+Technically, there is some performance drawback to this, but to me it&rsquo;s not noticeable.</p>
+<p>You probably don&rsquo;t need encryption in a VM except for practice.
+You might not need encryption in a desktop PC either.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cryptsetup -y -v luksFormat /dev/$part
+</span></span><span style="display:flex;"><span>cryptsetup open /dev/$part cryptroot
+</span></span></code></pre></div><p>Since we want to install <em>inside</em> the encrypted partition, we need to update our shorthand with <code>part=&quot;mapper/cryptroot&quot;</code>.</p>
+<h2 id="filesystems">Filesystems</h2>
+<p>Fairly easy.
+Create the file systems for the two partitions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkfs.ext4 /dev/$part
+</span></span><span style="display:flex;"><span>mkfs.fat -F32 /dev/$partefi
+</span></span></code></pre></div><h2 id="mounting">Mounting</h2>
+<p>We need to have the partitions mounted for the install process.
+The efi partition gets mounted inside the main one.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mount /dev/$part /mnt<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>mkdir /mnt/boot<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>mount /dev/$partefi /mnt/boot<span style="color:#e6db74">`</span>
+</span></span></code></pre></div><h1 id="installation">Installation</h1>
+<h1 id="inside-chroot">Inside Chroot</h1>
+<h1 id="graphical-environment">Graphical Environment</h1>
+<hr>
 
-		</div>
+		<p>Created: 2022 Sep 25 / Modified: 2022 Nov 08</p>
+		
+	</div>
 </body>

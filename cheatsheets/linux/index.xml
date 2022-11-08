@@ -13,7 +13,8 @@
       <pubDate>Sun, 25 Sep 2022 15:14:28 +0300</pubDate>
       
       <guid>http://nandor.ml/cheatsheets/linux/archinstall/</guid>
-      <description></description>
+      <description>Arch Linux is a Linux distro that&amp;rsquo;s relatively hard to install. While guided installers do exist, part of an Arch user&amp;rsquo;s pride comes from going through the process manually. It&amp;rsquo;s actually not difficult at all - running a list on commands in the right order with occasional decisionmaking woven in - but it is a great learning opportunity.
+This guide is based on my personal notes. Parts not relevant to me, such as a non-English keyboard layout it omitted because I never needed it.</description>
     </item>
     
     <item>

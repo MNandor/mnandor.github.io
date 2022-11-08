@@ -26,14 +26,20 @@
     <loc>http://nandor.ml/cheatsheets/android/interviews/</loc>
     <lastmod>2022-11-02T14:26:00+02:00</lastmod>
   </url><url>
+    <loc>http://nandor.ml/tags/dependency-injection/</loc>
+    <lastmod>2022-11-02T17:38:15+02:00</lastmod>
+  </url><url>
     <loc>http://nandor.ml/cheatsheets/android/hilt/</loc>
-    <lastmod>2022-11-02T14:17:22+02:00</lastmod>
+    <lastmod>2022-11-02T17:38:15+02:00</lastmod>
+  </url><url>
+    <loc>http://nandor.ml/tags/</loc>
+    <lastmod>2022-11-02T17:38:15+02:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/cheatsheets/android/dagger/</loc>
-    <lastmod>2022-11-01T17:51:38+02:00</lastmod>
+    <lastmod>2022-11-02T17:38:15+02:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/cheatsheets/linux/archinstall/</loc>
-    <lastmod>2022-11-02T15:23:48+02:00</lastmod>
+    <lastmod>2022-11-08T18:11:48+02:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/cheatsheets/linux/git/</loc>
     <lastmod>2022-11-02T15:23:48+02:00</lastmod>
@@ -78,7 +84,5 @@
     <lastmod>2022-09-18T20:46:28+03:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/categories/</loc>
-  </url><url>
-    <loc>http://nandor.ml/tags/</loc>
   </url>
 </urlset>
