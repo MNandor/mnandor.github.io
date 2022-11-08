@@ -232,7 +232,39 @@ Exit the installation environment, unplug the flash drive, and boot into the new
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>exit
 </span></span><span style="display:flex;"><span>umount -l /mnt
 </span></span><span style="display:flex;"><span>reboot
-</span></span></code></pre></div><hr>
+</span></span></code></pre></div><h1 id="postinstall">Postinstall</h1>
+<h2 id="syu">Syu</h2>
+<p>You probably want to update first.
+Memorize this command.
+Arch being a rolling release, it should be used every few days.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -Syu
+</span></span></code></pre></div><h2 id="yay">Yay</h2>
+<p>Yay is the package manager for the <abbr title="Arch User Repository">AUR</abbr>.
+One of the main reasons to run Arch. You probably want it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://aur.archlinux.org/yay.git
+</span></span><span style="display:flex;"><span>cd yay
+</span></span><span style="display:flex;"><span>makepkg -si
+</span></span><span style="display:flex;"><span>cd ..
+</span></span><span style="display:flex;"><span>rm -rf yay
+</span></span></code></pre></div><h2 id="python">Python</h2>
+<p>Python is a great programming/scripting language. It comes with its own package manager called <code>pip</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -S python3 python-pip
+</span></span></code></pre></div><h2 id="gvim">Gvim</h2>
+<p>The default <code>vim</code> package doesn&rsquo;t come with Xorg clipboard support, while <code>gvim</code> does.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -R vim
+</span></span><span style="display:flex;"><span>sudo pacman -S gvim
+</span></span></code></pre></div><h2 id="desktop">Desktop</h2>
+<p>These programs help customize the look of your desktop. The <code>dbus-next</code> package is used by Qtile for desktop notifications (like from <code>notify-send</code>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip3 install dbus-next
+</span></span><span style="display:flex;"><span>sudo pacman -S lxappearance lightdm-gtk-greeter-settings
+</span></span></code></pre></div><h2 id="further">Further</h2>
+<p>To get my exact environment, see:</p>
+<ul>
+<li><a href="https://github.com/MNandor/dotfiles">my dotfiles</a></li>
+<li><a href="https://github.com/MNandor/archinstall-rice">my rice config</a></li>
+<li><a href="../arch-packages">my package list</a></li>
+</ul>
+<hr>
 
 		<p>Created: 2022 Sep 25 / Modified: 2022 Nov 08</p>
 		
