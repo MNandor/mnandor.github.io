@@ -32,7 +32,13 @@ This guide is based on my personal notes. Parts not relevant to me, such as a no
       <pubDate>Sun, 25 Sep 2022 15:10:49 +0300</pubDate>
       
       <guid>http://nandor.ml/cheatsheets/linux/git/</guid>
-      <description></description>
+      <description>What is Git? made by Linus Torvalds
+to manage the Linux kernel
+distributed, non-linear workflows
+free/open-source
+network/server not required
+Command Tables Front Hotkey Command Notes Perskey Start git repo git init Commits Staging Front Hotkey Command Notes Perskey Stage changed file git add filename Stage all files in this folder and subfolders git add .
+git add * Add a &amp;ldquo;hunk&amp;rdquo; of code from the terminal git add -p filename</description>
     </item>
     
     <item>

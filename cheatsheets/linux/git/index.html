@@ -15,9 +15,866 @@
 	<div id="maindiv">
 		<h1>Git</h1>
 
-		<hr>
+		<div class="flex-container">
+   <div class="flex-items">
+		<img src="/img/torvalds.png" style=""></img>
+   </div>
+   <div class="flex-items" style="">
+<h2 id="what-is-git">What is Git?</h2>
+<ul>
+<li>
+<p>made by Linus Torvalds</p>
+</li>
+<li>
+<p>to manage the Linux kernel</p>
+</li>
+<li>
+<p>distributed, non-linear workflows</p>
+</li>
+<li>
+<p>free/open-source</p>
+</li>
+<li>
+<p>network/server not required</p>
+ </div>
+</li>
+</ul>
+</div>
+<style>
+	.flex-container {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content: normal;
+	  align-items: normal;
+	  align-content: normal;
+	  margin-left: 32px;
+	}
 
-		<p>Created: 2022 Sep 25 / Modified: 2022 Nov 02</p>
+	.flex-items{
+		max-width: 30%;
+	}
+</style>
+<h2 id="command-tables">Command Tables</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start git repo</td>
+<td></td>
+<td>git init</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="commits">Commits</h1>
+<h2 id="staging">Staging</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stage changed file</td>
+<td></td>
+<td>git add filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Stage all files in this folder and subfolders</td>
+<td></td>
+<td>git add .<br>git add *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Add a &ldquo;hunk&rdquo; of code from the terminal</td>
+<td></td>
+<td>git add -p filename<br>git add &ndash;patch filename</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="committing">Committing</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create commit?</td>
+<td></td>
+<td>git commit -m &ldquo;Message&rdquo;<br>git commit &ndash;message &ldquo;Message&rdquo;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Amend last commit?</td>
+<td></td>
+<td>git commit &ndash;amend</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Auto stage all modified and deleted files (but not new ones) while committing</td>
+<td></td>
+<td>git commit -a<br>git commit &ndash;all</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Take individual commit from elsewhere</td>
+<td></td>
+<td>git cherry-pick commithash</td>
+<td>This creates a different commit with identical changes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="resets">Resets</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Load staged version of file to disk</td>
+<td></td>
+<td>git restore filename<br>git checkout filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Unstage a file</td>
+<td></td>
+<td>git reset filename<br>git restore &ndash;staged filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Revert a commit by making a new commit with opposite changes</td>
+<td></td>
+<td>git revert commithash</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Revert <em>everything</em> to last commit</td>
+<td></td>
+<td>git reset &ndash;hard</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Unstage everything, but keep files as they are currently</td>
+<td></td>
+<td>git reset &ndash;mixed<br>git reset</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mark a commit as last but don&rsquo;t change files or staging area</td>
+<td></td>
+<td>git reset &ndash;soft</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Undo the action of &ldquo;git commit&rdquo;</td>
+<td></td>
+<td>git reset &ndash;soft HEAD~1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Delete a file from disk and staging area</td>
+<td></td>
+<td>git rm filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Delete a file staging area but not disk</td>
+<td></td>
+<td>git rm &ndash;cached filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Stage file that&rsquo;s in .gitignore</td>
+<td></td>
+<td>git add -f filename</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- j2aref Difference between git reset<br>--soft, --mixed, --hard? -->
+<!-- j2aref What does git revert do? -->
+<h1 id="info">Info</h1>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show commit history</td>
+<td></td>
+<td>git log</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show git history with diff</td>
+<td></td>
+<td>git log -p</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show git history that&rsquo;s relevant to a file</td>
+<td></td>
+<td>git log &ndash; filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show git history filtered by regex in added lines</td>
+<td></td>
+<td>git log -S text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show git history filtered by regex in commit message</td>
+<td></td>
+<td>git log &ndash;grep=&ldquo;text&rdquo;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show history, concisely</td>
+<td></td>
+<td>git log &ndash;oneline</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Display cool git tree?</td>
+<td></td>
+<td>git log &ndash;graph &ndash;oneline</td>
+<td></td>
+<td>gla</td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show diff of an individual commit?</td>
+<td></td>
+<td>git show commithash</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show diff of a commit on a file</td>
+<td></td>
+<td>git show commithash filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show content of a file as of a commit</td>
+<td></td>
+<td>git show commithash:filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show content of file in staging area</td>
+<td></td>
+<td>git show :filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Line-by-line, figure out which commit wrote file?</td>
+<td></td>
+<td>git blame filename<br>git annotate filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Git blame, ignoring whitespace</td>
+<td></td>
+<td>git blame -w filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show changes to non-staged files only</td>
+<td></td>
+<td>git diff</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show changes to staged files only</td>
+<td></td>
+<td>git diff &ndash;cached</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show changes between files on drive and last commit</td>
+<td></td>
+<td>git diff HEAD</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Show difference between two commits</td>
+<td></td>
+<td>git diff commithash1 commithash2</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- j2aref Git show variants -->
+<!-- j2aref Git regex -->
+<!-- j2aref True/False: Git amend safely deletes previous version of commit? -->
+<h1 id="branches">Branches</h1>
+<h2 id="branch-management">Branch Management</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List all branches</td>
+<td></td>
+<td>git branch</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>List all branches, local and remote</td>
+<td></td>
+<td>git branch -av</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Switch to a different branch</td>
+<td></td>
+<td>git checkout name</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Undo last branch switch, go back to where you were</td>
+<td></td>
+<td>git checkout -</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Create branch</td>
+<td></td>
+<td>git branch branchname</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Delete branch</td>
+<td></td>
+<td>git branch -d branchname</td>
+<td>-D is the same</td>
+<td></td>
+</tr>
+<tr>
+<td>Rename current branch</td>
+<td></td>
+<td>git branch -m branchname</td>
+<td>-M is the same</td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="remotes">Remotes</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Download remote repo</td>
+<td></td>
+<td>git clone url</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clone a remote repo&rsquo;s specific branch</td>
+<td></td>
+<td>git clone url -b branchname</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Checkout a remote branch in an existing local repo</td>
+<td></td>
+<td>git checkout &ndash;track -b branchname origin/branchname</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Download changes from remote</td>
+<td></td>
+<td>git fetch</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Update current branch with what&rsquo;s on remote</td>
+<td></td>
+<td>git pull</td>
+<td>Implicitly fetches</td>
+<td></td>
+</tr>
+<tr>
+<td>Put local changes on remote</td>
+<td></td>
+<td>git push</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Change remote url?</td>
+<td></td>
+<td>git remote set-url origin url</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- j2aref Difference between fetch and pull? -->
+<h2 id="sparse-checkout">Sparse Checkout</h2>
+<pre tabindex="0"><code>git init
+git remote add -f origin $url
+
+git config core.sparseCheckout true
+
+echo &#34;some/dir/&#34; &gt;&gt; .git/info/sparse-checkout
+echo &#34;another/sub/tree&#34; &gt;&gt; .git/info/sparse-checkout
+
+git pull origin master
+</code></pre><p><a href="https://stackoverflow.com/questions/600079/how-do-i-clone-a-subdirectory-only-of-a-git-repository">source</a></p>
+<h1 id="merge--rebase">Merge &amp; Rebase</h1>
+<h2 id="basic">Basic</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Merge branch B into current branch</td>
+<td></td>
+<td>git merge B</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Rebase develop to come after master</td>
+<td></td>
+<td>git rebase master develop</td>
+<td>Handles cherry-picks well</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="interactive-rebase">Interactive Rebase</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change commit messages in the past?</td>
+<td></td>
+<td>git rebase -i HEAD~5</td>
+<td>5 to change 5 commits<br>Change &ldquo;pick&rdquo; to &ldquo;reword&rdquo; in vim</td>
+<td></td>
+</tr>
+<tr>
+<td>How to reorder commits?</td>
+<td></td>
+<td>git rebase -i commithash</td>
+<td>Just reorder them in the text file</td>
+<td></td>
+</tr>
+<tr>
+<td>Rebase starting with initial commit</td>
+<td></td>
+<td>git rebase -i &ndash;root</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Change commit author of all past commits</td>
+<td></td>
+<td>git rebase &ndash;root &ndash;exec &lsquo;git commit &ndash;amend &ndash;no-edit &ndash;reset-author&rsquo;</td>
+<td>This uses the default author from config</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="tricks">Tricks</h1>
+<h2 id="stash">Stash</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create git stash</td>
+<td></td>
+<td>git stash name</td>
+<td>name is optional</td>
+<td></td>
+</tr>
+<tr>
+<td>Stash including untracked files</td>
+<td></td>
+<td>git stash -u</td>
+<td>name is optional</td>
+<td></td>
+</tr>
+<tr>
+<td>Get from git stash?</td>
+<td></td>
+<td>git stash pop</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="other">Other</h2>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How to see orphaned commits?</td>
+<td></td>
+<td>git reflog &ndash;all</td>
+<td>Optionally, | grep reset</td>
+<td></td>
+</tr>
+<tr>
+<td>Binary search which commit introduced a bug?<br>(manually test each version)</td>
+<td></td>
+<td>git bisect good commithash<br>git bisect bad</td>
+<td>Repeat good/bad</td>
+<td></td>
+</tr>
+<tr>
+<td>Show all current configuration?</td>
+<td></td>
+<td>git config -l</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>How to ignore a file that&rsquo;s already added to index?</td>
+<td></td>
+<td>git update-index &ndash;assume-unchanged filename</td>
+<td>To undo: git update-index &ndash;no-assume-unchanged<br>alias: ignore/unignore</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hooks">Hooks</h2>
+<ul>
+<li>to create a hook, go to <code>.git/hooks</code></li>
+<li>edit the file, <code>chmod 755</code>, and remove the <code>.sample</code> part</li>
+<li>for commits, try <code>pre-commit</code></li>
+<li>if it exists with error (bash: <code>exit 1</code>), the commit is prevented</li>
+<li><a href="https://githooks.com/">source</a></li>
+<li>run <code>git commit --no-verify</code> to skip the hook</li>
+<li>to include the hook in the repo: <a href="https://stackoverflow.com/questions/3462955/putting-git-hooks-into-a-repository">source</a></li>
+</ul>
+<h2 id="config">Config</h2>
+<ul>
+<li><code>git config --global</code>, then set these</li>
+<li>aliases: <code>git config --global alias.ignore &quot;update-index --assume-unchanged&quot;</code></li>
+</ul>
+<pre tabindex="0"><code>user.name=MNandor
+user.email=mnandor@users.noreply.github.com
+credential.helper=store
+init.defaultbranch=master
+pull.rebase=true
+</code></pre><h1 id="annex">Annex</h1>
+<ul>
+<li>to start, <code>git init</code> and <code>git annex init Name</code> in this order
+<ul>
+<li>skipping name creates an empty name</li>
+</ul>
+</li>
+<li><code>git annex add file</code>
+<ul>
+<li>this moves the files to the objects folder</li>
+<li>creates the symlinks</li>
+<li>also adds the symlinks to normal git</li>
+<li>does not annex small files
+<ul>
+<li>this is particularly sensible with a .gitignore file</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>`git commit -m &ldquo;msg&rdquo;
+<ul>
+<li>regular git manages the symlinks</li>
+</ul>
+</li>
+<li><code>git remote add org ../org</code>
+<ul>
+<li>can also with with ssh</li>
+</ul>
+</li>
+<li><code>git annex sync</code>
+<ul>
+<li>this updates the symlinks</li>
+<li>new symlinks pulled this way will naturally be broken</li>
+<li>pulls info only, does not push</li>
+</ul>
+</li>
+<li><code>git annex sync --content</code>
+<ul>
+<li>gets files as well as content</li>
+</ul>
+</li>
+<li>moving/renaming files works without issues
+<ul>
+<li><code>git add .</code> and commit as normal</li>
+</ul>
+</li>
+<li><code>git annex drop</code>
+<ul>
+<li>deletes the file content to save space</li>
+<li>does not remove the symlink</li>
+<li>checks to verify that at least one copy remains, does not let you drop the last one</li>
+<li>for your own good, the object files require sudo to delete</li>
+</ul>
+</li>
+<li><code>git annex move -f org file</code> <code>git annex move -t org file</code>
+<ul>
+<li>-f and -t are &ndash;from and &ndash;to respectively</li>
+<li>does what you expect, moves content but not symlinks</li>
+<li><code>copy</code> also works as expected</li>
+</ul>
+</li>
+<li><code>git annex whereis file</code>
+<ul>
+<li>you&rsquo;re not gonna believe what this command does!</li>
+</ul>
+</li>
+<li><code>git annex get file</code>
+<ul>
+<li>basically a copy with an auto -f (likely using whereis)</li>
+</ul>
+</li>
+<li><code>git annex fsck</code>
+<ul>
+<li>check files using checksums</li>
+<li>yep.</li>
+</ul>
+</li>
+<li><code>git annex unannex</code>
+<ul>
+<li>to turn into a normal file</li>
+<li>it&rsquo;s a copy, not a move - todo find a better solution</li>
+<li>use <code>git annex unannex --fast</code> instead</li>
+</ul>
+</li>
+</ul>
+
+<style>
+	table td:nth-child(2), table td:nth-child(5),
+	table th:nth-child(2), table th:nth-child(5){
+		display: none;
+	}
+	
+	
+	table td:nth-child(3) {
+		font-size: 1.5em;
+		font-family: monospace;
+		text-decoration: overline 1px yellow;
+		color: yellow;
+		
+	}
+
+</style>
+
+
+<hr>
+
+		<p>Created: 2022 Sep 25 / Modified: 2022 Nov 13</p>
 		
 	</div>
 </body>

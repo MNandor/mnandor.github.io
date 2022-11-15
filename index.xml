@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Sep 2022 16:30:54 +0300</lastBuildDate><atom:link href="http://nandor.ml/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Joke</title>
+      <link>http://nandor.ml/joke/</link>
+      <pubDate>Tue, 15 Nov 2022 17:50:32 +0200</pubDate>
+      
+      <guid>http://nandor.ml/joke/</guid>
+      <description> A nap vicce </description>
+    </item>
+    
+    <item>
       <title>Arch Packages</title>
       <link>http://nandor.ml/cheatsheets/linux/arch-packages/</link>
       <pubDate>Tue, 08 Nov 2022 20:10:06 +0200</pubDate>
@@ -122,7 +131,13 @@ This guide is based on my personal notes. Parts not relevant to me, such as a no
       <pubDate>Sun, 25 Sep 2022 15:10:49 +0300</pubDate>
       
       <guid>http://nandor.ml/cheatsheets/linux/git/</guid>
-      <description></description>
+      <description>What is Git? made by Linus Torvalds
+to manage the Linux kernel
+distributed, non-linear workflows
+free/open-source
+network/server not required
+Command Tables Front Hotkey Command Notes Perskey Start git repo git init Commits Staging Front Hotkey Command Notes Perskey Stage changed file git add filename Stage all files in this folder and subfolders git add .
+git add * Add a &amp;ldquo;hunk&amp;rdquo; of code from the terminal git add -p filename</description>
     </item>
     
     <item>

@@ -6,22 +6,6 @@
 	<title>
 		Nándor - Home
 	</title>
-	<style>
-		img {
-			max-width: 30%;
-			float: left;
-			margin-left: 16px;
-			margin-top: 0px;
-		}
-		#maindiv {
-			min-height: 40vw;
-		}
-		@media only screen and (max-width: 800px){
-		img {
-			float: inherit;
-			max-width: 50%;
-		}
-	</style>
 </head>
 <body>
 	<div id="headerdiv">
@@ -45,10 +29,31 @@
 
 	<div id="maindiv">
 		<h1 id="welcome">Welcome</h1>
-<p><img src="/img/reallifepfp.png" alt="text"></p>
+<div class="flex-container">
+   <div class="flex-items">
+		<img src="/img/reallifepfp.png" style=""></img>
+   </div>
+   <div class="flex-items" style="">
 <h2 id="about-me">About Me</h2>
 <p>My name is Nándor.</p>
 <p>I like free and open source software.</p>
+   </div>
+</div>
+<style>
+	.flex-container {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content: normal;
+	  align-items: normal;
+	  align-content: normal;
+	  margin-left: 32px;
+	}
+
+	.flex-items{
+		max-width: 30%;
+	}
+</style>
 <h2 id="android">Android</h2>
 <p>I currently work as an Android developer in Java and Kotlin.</p>
 <p>I&rsquo;ve been working in Agile teams and got to work on applications connecting to IoT devices.</p>
