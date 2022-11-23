@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Sep 2022 16:30:54 +0300</lastBuildDate><atom:link href="http://nandor.ml/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Custom Keyboard Layouts</title>
+      <link>http://nandor.ml/blog/custom-keyboard-layouts/</link>
+      <pubDate>Wed, 23 Nov 2022 17:32:29 +0200</pubDate>
+      
+      <guid>http://nandor.ml/blog/custom-keyboard-layouts/</guid>
+      <description>If you&amp;rsquo;re using a PC or laptop keyboard, there&amp;rsquo;s a good chance it comes with the EN (US) keyboard layout. That&amp;rsquo;s the letters of the English alphabet, along with special symbols like ;:&#39;&amp;quot;[](). This is a great layout for general use as well as programming.
+What this layout lacks is the special letters non-English languages use. Hungarian uses óöőúüűí, German öüäß, and Romanian îăâșț, along with their capitalized versions.
+To type these letters, the typical solution is to change the keyboard layout to the language&amp;rsquo;s.</description>
+    </item>
+    
+    <item>
       <title>Joke</title>
       <link>http://nandor.ml/joke/</link>
       <pubDate>Tue, 15 Nov 2022 17:50:32 +0200</pubDate>
