@@ -16,29 +16,41 @@
 		<h1>Git</h1>
 
 		<div class="flex-container">
-   <div class="flex-items">
+   <div class="flex-items" style="max-width: 30%;">
 		<img src="/img/torvalds.png" style=""></img>
    </div>
-   <div class="flex-items" style="">
+   <div class="flex-items" style="max-width: 70%;">
 <h2 id="what-is-git">What is Git?</h2>
 <ul>
-<li>
-<p>made by Linus Torvalds</p>
-</li>
-<li>
-<p>to manage the Linux kernel</p>
-</li>
-<li>
-<p>distributed, non-linear workflows</p>
-</li>
-<li>
-<p>free/open-source</p>
-</li>
-<li>
-<p>network/server not required</p>
- </div>
-</li>
+<li>made by Linus Torvalds</li>
+<li>to manage the Linux kernel</li>
+<li>distributed, non-linear workflows</li>
+<li>free/open-source</li>
+<li>network/server not required</li>
 </ul>
+<h2 id="graphical-clients">Graphical Clients</h2>
+<ul>
+<li>frontend to git commands</li>
+<li>provide some helpful visualizations</li>
+<li>I recommend learning the commands themselves</li>
+</ul>
+<figure class="guiclient"><a href="https://sourcetreeapp.com"><img src="/img/sourcetree.png"/></a><figcaption>
+            <h4>Sourcetree</h4>
+        </figcaption>
+</figure>
+<figure class="guiclient"><a href="https://desktop.github.com"><img src="/img/github.png"/></a><figcaption>
+            <h4>Github Desktop</h4>
+        </figcaption>
+</figure>
+<figure class="guiclient"><a href="https://www.gitkraken.com/"><img src="/img/gitkraken.png"/></a><figcaption>
+            <h4>GitKraken</h4>
+        </figcaption>
+</figure>
+<figure class="guiclient"><a href="https://git-scm.com"><img src="/img/gitgui.png"/></a><figcaption>
+            <h4>Git GUI</h4>
+        </figcaption>
+</figure>
+   </div>
 </div>
 <style>
 	.flex-container {
@@ -55,7 +67,8 @@
 		max-width: 30%;
 	}
 </style>
-<h2 id="command-tables">Command Tables</h2>
+<p>My notes contain Markdown/HTML tables in this format.
+This is to make it easy to export them. See <a href="https://github.com/MNandor/joplin-to-anki">J2A</a>.</p>
 <table>
 <thead>
 <tr>
@@ -77,7 +90,58 @@
 </tbody>
 </table>
 <h1 id="commits">Commits</h1>
+<div class="flex-container">
+   <div class="flex-items" style="max-width: 30%;">
+		<img src="/img/commit.png" style=""></img>
+   </div>
+   <div class="flex-items" style="max-width: 70%;">
+<h2 id="whats-a-commit">What&rsquo;s a commit?</h2>
+<ul>
+<li>
+<p>one &ldquo;version&rdquo; of the code</p>
+</li>
+<li>
+<p>standard unit of a git repository</p>
+</li>
+<li>
+<p>contains a list of changes</p>
+</li>
+<li>
+<p>references previous commit</p>
+</li>
+<li>
+<p>one link in a linked list</p>
+</li>
+<li>
+<p>information about commit author</p>
+</li>
+<li>
+<p>commit message</p>
+</li>
+<li>
+<p>defined by a unique commit hash</p>
+ </div>
+</li>
+</ul>
+</div>
+<style>
+	.flex-container {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content: normal;
+	  align-items: normal;
+	  align-content: normal;
+	  margin-left: 32px;
+	}
+
+	.flex-items{
+		max-width: 30%;
+	}
+</style>
 <h2 id="staging">Staging</h2>
+<p>To prepare a changed, added, or removed (see below) file for a commit, it needs to be added to an in-between placed called the <span style="text-decoration: underline;">staging area</span>.</p>
+<p>Some commands take the option <code>--cached</code> or <code>--staged</code> to interact with the staging area. This is not consistent between commands.</p>
 <table>
 <thead>
 <tr>
@@ -104,15 +168,38 @@
 <td></td>
 </tr>
 <tr>
-<td>Add a &ldquo;hunk&rdquo; of code from the terminal</td>
+<td>Stage a &ldquo;hunk&rdquo; of code from the terminal</td>
 <td></td>
-<td>git add -p filename<br>git add &ndash;patch filename</td>
+<td>git add -p filename<br>git add --patch filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Delete a file from disk and staging area</td>
+<td></td>
+<td>git rm filename</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Delete a file staging area but not disk</td>
+<td></td>
+<td>git rm --cached filename</td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="committing">Committing</h2>
+<p>Committing is the act of recording the changes in the staging area into a commit.</p>
+<p>For the commit message, the convention is to write it as an imperative. For example, &ldquo;This commit will <span style="text-decoration: underline;">Implement image loading API</span>&rdquo;.</p>
 <table>
 <thead>
 <tr>
@@ -125,14 +212,14 @@
 </thead>
 <tbody>
 <tr>
-<td>Create commit?</td>
+<td>Create commit</td>
 <td></td>
 <td>git commit -m &ldquo;Message&rdquo;<br>git commit &ndash;message &ldquo;Message&rdquo;</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Amend last commit?</td>
+<td>Amend last commit</td>
 <td></td>
 <td>git commit &ndash;amend</td>
 <td></td>
@@ -145,22 +232,12 @@
 <td></td>
 <td></td>
 </tr>
-<tr>
-<td> </td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Take individual commit from elsewhere</td>
-<td></td>
-<td>git cherry-pick commithash</td>
-<td>This creates a different commit with identical changes</td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<figure><img src="/img/gitareas1.png" width="100%"/>
+</figure>
+
+<h1 id="undo">Undo</h1>
 <h2 id="resets">Resets</h2>
 <table>
 <thead>
@@ -233,20 +310,6 @@
 <td> </td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Delete a file from disk and staging area</td>
-<td></td>
-<td>git rm filename</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Delete a file staging area but not disk</td>
-<td></td>
-<td>git rm &ndash;cached filename</td>
 <td></td>
 <td></td>
 </tr>
@@ -868,13 +931,32 @@ pull.rebase=true
 		color: yellow;
 		
 	}
+	.guiclient {
+		display: inline-block;
+		width: 24%;
+		margin: 0px;
+	}
+	figcaption h4 {
+		text-align: center;
+		margin-left: 0px;
+		margin-top: 0px;
+	}
 
 </style>
 
 
+<div style="border: 1px solid red; margin-left: 32px; margin-right: 16px; border-radius: 8px;">
+<p style="margin-bottom: -16px;"><span style="font-size: .7em; margin:0px;">Mnemonic</span></p>
+<p><span style="text-decoration: underline; font-size: 1.5em;">@ a - @:a</span></p>
+<p>
+<p><code>@ a</code> displays the changes made to the file <code>a</code> in commit <code>@</code>.</p>
+<p><code>@:a</code> displays the content of <code>a</code> &ldquo;as of&rdquo; commit <code>@</code>.</p>
+</p>
+</div>
+<p>Take individual commit from elsewhere||git cherry-pick commithash|This creates a different commit with identical changes|</p>
 <hr>
 
-		<p>Created: 2022 Sep 25 / Modified: 2022 Nov 13</p>
+		<p>Created: 2022 Sep 25 / Modified: 2022 Nov 27</p>
 		
 	</div>
 </body>

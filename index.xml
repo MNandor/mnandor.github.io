@@ -142,13 +142,8 @@ This guide is based on my personal notes. Parts not relevant to me, such as a no
       <pubDate>Sun, 25 Sep 2022 15:10:49 +0300</pubDate>
       
       <guid>http://nandor.ml/cheatsheets/linux/git/</guid>
-      <description>What is Git? made by Linus Torvalds
-to manage the Linux kernel
-distributed, non-linear workflows
-free/open-source
-network/server not required
-Command Tables Front Hotkey Command Notes Perskey Start git repo git init Commits Staging Front Hotkey Command Notes Perskey Stage changed file git add filename Stage all files in this folder and subfolders git add .
-git add * Add a &amp;ldquo;hunk&amp;rdquo; of code from the terminal git add -p filename</description>
+      <description>What is Git? made by Linus Torvalds to manage the Linux kernel distributed, non-linear workflows free/open-source network/server not required Graphical Clients frontend to git commands provide some helpful visualizations I recommend learning the commands themselves Sourcetree Github Desktop GitKraken Git GUI My notes contain Markdown/HTML tables in this format. This is to make it easy to export them. See J2A.
+Front Hotkey Command Notes Perskey Start git repo git init Commits What&amp;rsquo;s a commit?</description>
     </item>
     
     <item>
