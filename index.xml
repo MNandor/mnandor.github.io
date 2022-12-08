@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Sep 2022 16:30:54 +0300</lastBuildDate><atom:link href="http://nandor.ml/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Why Skyrim and Doom Are Awesome</title>
+      <link>http://nandor.ml/blog/why-skyrim-and-doom-are-awesome/</link>
+      <pubDate>Fri, 02 Dec 2022 18:24:15 +0200</pubDate>
+      
+      <guid>http://nandor.ml/blog/why-skyrim-and-doom-are-awesome/</guid>
+      <description>Skyrim Skyrim is a medieval fantasy RPG set in the world of Elder Scrolls. The planet is called Nirn, the continent Tamriel, and the country, well, Skyrim.
+The player can freely explore the open world right after the tutorial area. She&amp;rsquo;s encouraged to fight bandits, save people, learn magic, kill dragons, ride dragons, and influence the political landscape.
+Skyrim is widely praised for how much it lets the player customize her Dragonborn, be it a Nord fighter wielding a greatsword, the oh-so-prevalent stealth archer Khajiit, or a mage who challenges herself by using anything but the Destruction school.</description>
+    </item>
+    
+    <item>
       <title>Custom Keyboard Layouts</title>
       <link>http://nandor.ml/blog/custom-keyboard-layouts/</link>
       <pubDate>Wed, 23 Nov 2022 17:32:29 +0200</pubDate>
@@ -143,7 +154,7 @@ This guide is based on my personal notes. Parts not relevant to me, such as a no
       
       <guid>http://nandor.ml/cheatsheets/linux/git/</guid>
       <description>What is Git? made by Linus Torvalds to manage the Linux kernel distributed, non-linear workflows free/open-source network/server not required Graphical Clients frontend to git commands provide some helpful visualizations I recommend learning the commands themselves Sourcetree Github Desktop GitKraken Git GUI My notes contain Markdown/HTML tables in this format. This is to make it easy to export them. See J2A.
-Front Hotkey Command Notes Perskey Start git repo git init Commits What&amp;rsquo;s a commit?</description>
+Front Hotkey Command Notes Perskey Start git repo git init Commits asd &amp;ndash;asd&amp;ndash; ddd</description>
     </item>
     
     <item>
