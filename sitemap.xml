@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://nandor.ml/blog/get-into-programming-beginner-guide/</loc>
+    <lastmod>2023-01-16T20:48:24+02:00</lastmod>
+  </url><url>
     <loc>http://nandor.ml/cheatsheets/linux/cron/</loc>
     <lastmod>2023-01-13T10:35:49+02:00</lastmod>
   </url><url>
@@ -99,7 +102,7 @@
     <lastmod>2022-12-16T12:58:40+02:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/</loc>
-    <lastmod>2022-12-10T12:13:43+02:00</lastmod>
+    <lastmod>2023-01-16T21:59:53+02:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/categories/</loc>
   </url>
