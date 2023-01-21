@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Sep 2022 16:30:54 +0300</lastBuildDate><atom:link href="http://nandor.ml/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Xargs</title>
+      <link>http://nandor.ml/cheatsheets/linux/xargs/</link>
+      <pubDate>Sat, 21 Jan 2023 23:34:46 +0200</pubDate>
+      
+      <guid>http://nandor.ml/cheatsheets/linux/xargs/</guid>
+      <description>Introduction source allows for piping to the command arguments essentially converts stdin to command line call as with all stdin programs, if you don&amp;rsquo;t pipe another command into it, input is read from the terminal command1 | xargs command2 particularly useful for calling programs with the output of dmenu Separation by default, xargs collects all of stdin and executes the command once this can be changed to run the command every X lines or space-separated words this can be changed to run the command every X lines or space-separated words Front Hotkey Command Notes Perskey Run xargs command after every line of input xargs -L 1 figlet Run xargs command after every word of input xargs -n 1 figlet Run xargs command separated by &amp;lsquo;w&amp;rsquo; xargs -n 1 -d w figlet Delimiter Options xargs -t to also print the command being ran xargs -r to only run if stdin is not empty xargs -p to prompt Substitution if the command is not specified, it&amp;rsquo;s echo the argument(s) are appended at the end by default -I implies -L1 Front Hotkey Command Notes Perskey Run xargs using substitution for the argument xargs -I {} figlet a {} b Run multiple commands in an xargs call xargs -I {} sh -c &amp;ldquo;figlet {} &amp;amp;&amp;amp; echo {}&amp;rdquo; </description>
+    </item>
+    
+    <item>
       <title>Riding the Git-Wave</title>
       <link>http://nandor.ml/blog/ai-stuff/riding-the-git-wave/</link>
       <pubDate>Tue, 17 Jan 2023 13:57:05 +0200</pubDate>

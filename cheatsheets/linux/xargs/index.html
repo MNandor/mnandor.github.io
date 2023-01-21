@@ -1,0 +1,115 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="icon" href="/img/icon.png">
+	<title>
+		Cheatsheet - Xargs
+	</title>
+</head>
+<body>
+	<div id="headerdiv">
+	<a href="../index.html">Back</a>
+</div>
+
+
+	<div id="maindiv">
+		<p style="font-size: 48px; border-bottom: 6px double #FF0000; text-align: center; padding-bottom: 32px; margin-left: 0px; margin-right: 0px;"><b>Xargs</b></p>
+
+		<h1 id="introduction">Introduction</h1>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=rp7jLi_kgPg">source</a></li>
+<li>allows for piping to the command arguments
+<ul>
+<li>essentially converts stdin to command line call</li>
+<li>as with all stdin programs, if you don&rsquo;t pipe another command into it, input is read from the terminal</li>
+</ul>
+</li>
+<li><code>command1 | xargs command2</code></li>
+<li>particularly useful for calling programs with the output of <code>dmenu</code></li>
+</ul>
+<h1 id="separation">Separation</h1>
+<ul>
+<li>by default, xargs collects all of stdin and executes the command once</li>
+<li>this can be changed to run the command every X lines or space-separated words</li>
+<li>this can be changed to run the command every X lines or space-separated words</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run xargs command after every line of input</td>
+<td></td>
+<td>xargs -L 1 figlet</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Run xargs command after every word of input</td>
+<td></td>
+<td>xargs -n 1 figlet</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Run xargs command separated by &lsquo;w&rsquo;</td>
+<td></td>
+<td>xargs -n 1 -d w figlet</td>
+<td>Delimiter</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="options">Options</h1>
+<ul>
+<li><code>xargs -t</code> to also print the command being ran</li>
+<li><code>xargs -r</code> to only run if stdin is not empty</li>
+<li><code>xargs -p</code> to prompt</li>
+</ul>
+<h1 id="substitution">Substitution</h1>
+<ul>
+<li>if the command is not specified, it&rsquo;s <code>echo</code></li>
+<li>the argument(s) are appended at the end by default</li>
+<li><code>-I</code> implies <code>-L1</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Front</th>
+<th>Hotkey</th>
+<th>Command</th>
+<th>Notes</th>
+<th>Perskey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run xargs using substitution for the argument</td>
+<td></td>
+<td>xargs -I {} figlet a {} b</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Run multiple commands in an xargs call</td>
+<td></td>
+<td>xargs -I {} sh -c &ldquo;figlet {} &amp;&amp; echo {}&rdquo;</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<style> table td:nth-child(2), table td:nth-child(5), table th:nth-child(2), table th:nth-child(5){ display: none; } table td:nth-child(1) { width: 150px; } table td:nth-child(3) { font-size: 1.5em; font-family: monospace; text-decoration: overline 1px green; color: green; } table td:nth-child(4), table td:nth-child(1){ width: 250px; } table td:nth-child(3){ width: 50%; } /* disable joplin's default huge padding */ th, td, tr { padding: 4px !important; } </style> 
+<hr>
+
+		<p>Created: 2023 Jan 21 / Modified: 2023 Jan 21</p>
+		
+	</div>
+</body>
