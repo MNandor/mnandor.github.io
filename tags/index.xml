@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Nándor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Nov 2022 17:35:50 +0200</lastBuildDate><atom:link href="http://nandor.ml/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jan 2023 02:44:56 +0200</lastBuildDate><atom:link href="http://nandor.ml/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>german</title>
+      <link>http://nandor.ml/tags/german/</link>
+      <pubDate>Wed, 25 Jan 2023 02:44:56 +0200</pubDate>
+      
+      <guid>http://nandor.ml/tags/german/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>dependency injection</title>
       <link>http://nandor.ml/tags/dependency-injection/</link>

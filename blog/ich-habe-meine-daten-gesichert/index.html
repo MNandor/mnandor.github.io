@@ -1,0 +1,83 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="icon" href="/img/icon.png">
+	<title>
+		Blog - Ich Habe Meine Daten Gesichert
+	</title>
+</head>
+<body>
+	<div id="headerdiv">
+	<a href="../index.html">Back</a>
+</div>
+
+
+	<div id="maindiv">
+		<p style="font-size: 48px; border-bottom: 6px double #FF0000; text-align: center; padding-bottom: 32px; margin-left: 0px; margin-right: 0px;"><b>Ich Habe Meine Daten Gesichert</b></p>
+
+
+		<p>Dieser Artikel ist auf Deutch.
+Ich bin kein Muttersprachler, also bitte verzeih mir bitte meine Fehler.
+Das ist meine Art, zu üben!</p>
+<h1 id="was-ich-will">Was Ich Will</h1>
+<p>Um den Kontext zu verdeutlichen: Hier geht es um die Sicherung von Dateien unter Arch Linux.</p>
+<p>Mein Laptop hat eine 2TB SSD (wovon 1TB wichtig ist).</p>
+<p>Ich habe auch eine externe Festplatte mit 1 TB, die ich für Sicherungskopien verwenden möchte.</p>
+<h1 id="die-3-2-1-regel">Die 3-2-1-Regel</h1>
+<p>Es gibt einen beliebten Ratschlag, wenn es um Dateisicherungen geht:</p>
+<ol>
+<li>man sollte drei Kopien seiner Dateien haben</li>
+<li>auf zwei verschiedenen Geräten</li>
+<li>und eines davon sollte außerhalb des Standorts sein</li>
+</ol>
+<p>Ich habe auch meine eigenen Regeln:</p>
+<ol start="4">
+<li>wenn ich versehentlich etwas lösche, sollte ich in der Lage sein, das es zu retten</li>
+<li>wenn meine Festplatte explodiert, sollte ich in der Lage sein, das zu retten, was Wichtig ist</li>
+<li>wenn mein Haus abbrennt, sollte ich in der Lage sein, das zu retten, was Nötig ist</li>
+</ol>
+<h1 id="btrfs">BTRFS</h1>
+<p><a href="https://wiki.archlinux.org/title/Btrfs">Btrfs</a> ist ein Dateisystem. Es gehört zur gleichen Kategorie wie <code>NTFS</code>, <code>FAT32</code>, oder <code>ext4</code>.
+Was es von anderen unterscheidet ist <abbr title="Copy-on-Write">CoW</abbr>.
+Im Wesentlichen, das heißt, wenn eine Datei überschrieben wird, bleibt die ursprüngliche Kopie auf der Festplatte.
+Mit Btrfs können wir diese Kopien in &ldquo;Snapshots&rdquo; speichern.</p>
+<p>Ich werde bald eine eigene Cheatsheet-seite für BTRFS einrichten, aber fürs Erste habe ich den folgenden Befehl verwendet:</p>
+<!-- todo -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkfs.btrfs /dev/$partition
+</span></span></code></pre></div><h1 id="snapshots-erstellen">Snapshots Erstellen</h1>
+<p>Snapshots in BTRFS zu erstellen ist eigentlich sehr einfach.
+Man kann Timeshift verwenden, oder den folgenden Befehl:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>btrfs subvolume snapshot -r /home /snapshots/$snapName
+</span></span></code></pre></div><p>Die Option <code>-r</code> macht den Snapshot schreibgeschützt.</p>
+<p>Ich habe ein gesondertes Subvolume für meine Home-Partition, daher muss ich es in dem Befehl angeben.</p>
+<p>Timeshift ermöglicht periodische Snapshots, aber ich benutze den Befehl lieber manuell.</p>
+<h1 id="snapshots-kopieren">Snapshots Kopieren</h1>
+<p>Sobald wir BTRFS auf beiden Geräten haben, können wir Snapshots von einem auf das andere Gerät kopieren.</p>
+<p>Wenn die externe Festplatte unter /mnt liegt, lautet der Befehl:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>btrfs send /snapshots/$snapName | btrfs receive /mnt
+</span></span></code></pre></div><h2 id="inkrementelle-snapshots">Inkrementelle Snapshots</h2>
+<p>Wir wollen jedoch nicht alle Snapshots vollständig kopieren. Um nur das zu kopieren, was sich seit dem letzten gesicherten Snapshot geändert hat:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>snapshot<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>	snapName<span style="color:#f92672">=</span>home-<span style="color:#66d9ef">$(</span>date +<span style="color:#e6db74">&#34;%Y-%m-%d_%H-%M-%S&#34;</span><span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>	btrfs subvolume snapshot -r /home /snapshots/$snapName
+</span></span><span style="display:flex;"><span>	echo $snapName | tee /snapshots/newest
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>backupSnapshot<span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>	latest<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat /snapshots/latest<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>	newest<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat /snapshots/newest<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>	btrfs send -p /snapshots/$latest /snapshots/$newest | btrfs receive /mnt
+</span></span><span style="display:flex;"><span>	echo <span style="color:#e6db74">&#34;</span>$newest<span style="color:#e6db74">&#34;</span> | tee /snapshots/latest
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Bei dieser Methode werden zwei Dateien mit den Namen <code>newest</code> und <code>latest</code> verwendet.
+In der ersten wird der Name des neuesten Snapshots gespeichert, in der zweiten der Name des zuletzt auf die externe Festplatte kopierten Snapshots.
+Wir können dann den Unterschied zwischen diesen beiden kopieren.</p>
+<h1 id="encryption">Encryption</h1>
+<hr>
+
+		<p>Created: 2023 Jan 25 / Modified: 2023 Jan 25</p>
+		
+			<p>Tags: german</p>
+		
+	</div>
+</body>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ai Stuff on Nándor</title>
+    <title>AI Stuff on Nándor</title>
     <link>http://nandor.ml/blog/ai-stuff/</link>
-    <description>Recent content in Ai Stuff on Nándor</description>
+    <description>Recent content in AI Stuff on Nándor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Jan 2023 13:56:25 +0200</lastBuildDate><atom:link href="http://nandor.ml/blog/ai-stuff/index.xml" rel="self" type="application/rss+xml" />

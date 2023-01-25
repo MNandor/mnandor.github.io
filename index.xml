@@ -8,6 +8,19 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Sep 2022 16:30:54 +0300</lastBuildDate><atom:link href="http://nandor.ml/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Ich Habe Meine Daten Gesichert</title>
+      <link>http://nandor.ml/blog/ich-habe-meine-daten-gesichert/</link>
+      <pubDate>Wed, 25 Jan 2023 02:44:56 +0200</pubDate>
+      
+      <guid>http://nandor.ml/blog/ich-habe-meine-daten-gesichert/</guid>
+      <description>Dieser Artikel ist auf Deutch. Ich bin kein Muttersprachler, also bitte verzeih mir bitte meine Fehler. Das ist meine Art, zu üben!
+Was Ich Will Um den Kontext zu verdeutlichen: Hier geht es um die Sicherung von Dateien unter Arch Linux.
+Mein Laptop hat eine 2TB SSD (wovon 1TB wichtig ist).
+Ich habe auch eine externe Festplatte mit 1 TB, die ich für Sicherungskopien verwenden möchte.
+Die 3-2-1-Regel Es gibt einen beliebten Ratschlag, wenn es um Dateisicherungen geht:</description>
+    </item>
+    
+    <item>
       <title>Xargs</title>
       <link>http://nandor.ml/cheatsheets/linux/xargs/</link>
       <pubDate>Sat, 21 Jan 2023 23:34:46 +0200</pubDate>
