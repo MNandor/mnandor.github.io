@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://nandor.ml/blog/android-apps/</loc>
+    <lastmod>2023-02-04T08:15:39+02:00</lastmod>
+  </url><url>
     <loc>http://nandor.ml/blog/my-perfect-phone/</loc>
-    <lastmod>2023-02-02T05:35:06+02:00</lastmod>
+    <lastmod>2023-02-04T08:15:39+02:00</lastmod>
   </url><url>
     <loc>http://nandor.ml/tags/german/</loc>
     <lastmod>2023-01-31T03:25:02+02:00</lastmod>

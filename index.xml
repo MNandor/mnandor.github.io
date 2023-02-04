@@ -8,6 +8,18 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 17 Sep 2022 16:30:54 +0300</lastBuildDate><atom:link href="http://nandor.ml/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Android Apps</title>
+      <link>http://nandor.ml/blog/android-apps/</link>
+      <pubDate>Fri, 03 Feb 2023 04:19:15 +0200</pubDate>
+      
+      <guid>http://nandor.ml/blog/android-apps/</guid>
+      <description>In my last blog post, I described the installation process of my new phone. I am extremely happy with both the device and LineageOS.
+However, LineageOS only ships a few bare essential apps, such as Calendar or Clock. They do not have many features either.
+This is a good thing. I intentionally chose a non-bloated ROM so that I can configure it to my liking.
+In this post, I&amp;rsquo;ll detail all the choice I made in terms of apps to install.</description>
+    </item>
+    
+    <item>
       <title>My Perfect Phone</title>
       <link>http://nandor.ml/blog/my-perfect-phone/</link>
       <pubDate>Wed, 01 Feb 2023 02:07:03 +0200</pubDate>
