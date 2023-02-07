@@ -32,7 +32,7 @@ sudo pacman -S cronie sudo systemctl enable --now cronie Jobs Front Hotkey Comma
       <pubDate>Tue, 08 Nov 2022 20:10:06 +0200</pubDate>
       
       <guid>http://nandor.ml/cheatsheets/linux/arch-packages/</guid>
-      <description>Editors &amp;amp; Tools p gdisk partition manager Development p hugo static website generator p vimpager less replacement Browsers &amp;amp; Players p task taskwarrior p firefox web browser y tor-browser p virtualbox y anki p keepass Players p cmus terminal-based music player p vlc or mpv video player p gthumb image viewer Fun p cmatrix cool animation p figlet cool text p lolcat cool colors p neofetch mandatory for Arch Hardware p firejail sandboxer p ufw uncomplicated firewall Desktop p slock screen locker y albert p thunar or nemo graphical file manager Install Scripts Requires Javascript</description>
+      <description>Editors &amp;amp; Tools p gdisk partition manager Development p hugo static website generator p vimpager less replacement Browsers &amp;amp; Players p task taskwarrior p firefox web browser p cmus terminal-based music player p vlc or mpv video player p thunar or nemo graphical file manager p gthumb image viewer y tor-browser p virtualbox Fun p cmatrix cool animation p figlet cool text p lolcat cool colors p neofetch mandatory for Arch Hardware &amp;amp; Desktop p slock screen locker p firejail sandboxer p ufw uncomplicated firewall Install Scripts Requires Javascript</description>
     </item>
     
     <item>
