@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="960"
+   height="480"
+   viewBox="0 0 253.99999 127"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:19.7556px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';stroke-width:1.5875;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+       x="89.632256"
+       y="70.473724"
+       id="text1"><tspan
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:19.7556px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';stroke-width:1.5875;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+         x="89.632256"
+         y="70.473724">Android</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+       x="21.978594"
+       y="97.852951"
+       id="text13"><tspan
+         id="tspan13"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:8.46667px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+         x="21.978594"
+         y="97.852951">Unit Tests</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+       x="198.73624"
+       y="34.141399"
+       id="text2"><tspan
+         id="tspan2"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:14.1111px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+         x="198.73624"
+         y="34.141399">SDK</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+       x="200.35696"
+       y="73.786987"
+       id="text4"><tspan
+         id="tspan4"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:14.1111px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+         x="200.35696"
+         y="73.786987">Git</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+       x="14.954678"
+       y="86.644501"
+       id="text5"><tspan
+         id="tspan5"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:14.1111px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+         x="14.954678"
+         y="86.644501">Testing</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+       x="139.39594"
+       y="108.20924"
+       id="text6"><tspan
+         id="tspan6"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:14.1111px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+         x="139.39594"
+         y="108.20924">Java</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+       x="75.717918"
+       y="108.20924"
+       id="text7"><tspan
+         id="tspan7"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:14.1111px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+         x="75.717918"
+         y="108.20924">Kotlin</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="19.508728"
+       y="37.011509"
+       id="text8"><tspan
+         id="tspan8"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:14.1111px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="19.508728"
+         y="37.011509">Cross-Platform</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="11.398912"
+       y="51.600033"
+       id="text9"><tspan
+         id="tspan9"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:8.46667px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="11.398912"
+         y="51.600033">React Native</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="49.874794"
+       y="18.268684"
+       id="text10"><tspan
+         id="tspan10"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:8.46667px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="49.874794"
+         y="18.268684">Flutter/Dart</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="154.11382"
+       y="22.543621"
+       id="text3"><tspan
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:14.1111px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="154.11382"
+         y="22.543621">NDK</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="162.5345"
+       y="31.750891"
+       id="text11"><tspan
+         id="tspan11"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:8.46667px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-width:1.05833333;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="162.5345"
+         y="31.750891">C/C++</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14.1111px;line-height:1.25;font-family:'Comic Mono';-inkscape-font-specification:'Comic Mono';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+       x="193.67928"
+       y="100.00771"
+       id="text12"><tspan
+         id="tspan12"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:14.1111px;font-family:FreeSans;-inkscape-font-specification:'FreeSans Semi-Bold';stroke-width:1.05833333;fill:#9d9a3d;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-dasharray:none;paint-order:stroke fill markers"
+         x="193.67928"
+         y="100.00771">ADB</tspan></text>
+  </g>
+</svg>
