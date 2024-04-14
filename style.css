@@ -13,12 +13,10 @@ body {
 }
 
 .img-full {
-    top: 10px;
-    width: auto;
-    max-width: 30%;
-    max-height: 70%;
-    float: right;
-    padding-right: 10%;
+    padding: 10%;
+    /* width: auto; */
+    max-width: 80%;
+    max-height: 80%;
 }
 #title-text{
     font-size: 4em;
@@ -87,9 +85,31 @@ body {
 
 }
 
+/* default and phones */
 .section{
     height: 50vh;
     background-color: whitesmoke;
+}
+
+/* typical desktop and laptop */
+@media (min-aspect-ratio: 3/2){
+    .section{
+        height: 70vh;
+    }
+}
+
+/* landscape phone screens */
+@media (min-aspect-ratio: 2/1){
+    .section{
+        height: 90vh;
+    }
+}
+
+/* very tall devices: just start showing more content */
+@media (max-aspect-ratio: 1/2){
+    .section{
+        height: 100vw;
+    }
 }
 
 .section-container {
@@ -103,18 +123,16 @@ body {
     margin-left: 0;
 }
 .section-smaller {
-    /* background-color: green; */
-    flex-grow: 1;
-    flex-basis: 0px; /* give 0 space by default, then split by flex-grow */
+    /* give 0 space by default, then split by flex-grow */
+    /* see also section-larger which grows twice as big */
+    flex-grow: 1; 
+    flex-basis: 0px; 
 }
+
 .section-larger {
     /* background-color: yellow; */
     flex-grow: 2;
     flex-basis: 0px; /* give 0 space by default, then split by flex-grow */
-}
-.section-larger img, .section-smaller img {
-    max-width: 90%;
-    max-height: 90%;
 }
 
 .has-box-shadow{
