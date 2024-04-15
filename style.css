@@ -33,6 +33,8 @@ body {
     color: #9d9a3d;
     /* text-stroke: 4px #9d9a3d; */
     -webkit-text-stroke: 2px black;
+    margin-top: 4px;
+    margin-bottom: 8px;
 }
 .section-subtitle{
     font-size: 2em;
@@ -217,8 +219,14 @@ body {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    height:auto;
 }
 .sideways > div{
     flex: 1 0 90%;
     scroll-snap-align: start;
+    max-height: 100%;;
+}
+
+.might-overflow-on-weird-screens{
+    overflow-y: scroll;
 }
