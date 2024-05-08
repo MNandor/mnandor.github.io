@@ -87,31 +87,8 @@ body {
 
 }
 
-/* default and phones */
 .section{
-    height: 50vh;
     background-color: whitesmoke;
-}
-
-/* typical desktop and laptop */
-@media (min-aspect-ratio: 3/2){
-    .section{
-        height: 70vh;
-    }
-}
-
-/* landscape phone screens */
-@media (min-aspect-ratio: 2/1){
-    .section{
-        height: 90vh;
-    }
-}
-
-/* very tall devices: just start showing more content */
-@media (max-aspect-ratio: 1/2){
-    .section{
-        height: 100vw;
-    }
 }
 
 .section-container {
