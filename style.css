@@ -207,3 +207,18 @@ body {
 .might-overflow-on-weird-screens{
     overflow-y: scroll;
 }
+
+.appTag{
+	background-color: #9d9a3d;
+	padding: 4px;
+	border-radius: 8px;
+	margin-right: 8px;
+	border: 2px dotted black;
+	display: inline-block;
+	margin-bottom: 8px;
+}
+
+.appTagDiv{
+	display: flex;
+	gap: 30px;
+}
